@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-image: url();
+            display: flex;
+            background-color: rgb(232, 252, 233);
+            height: 80vh;
+            width: 25vw;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 50px;
+            justify-self: center;
+            align-items: center;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 10px 10px 10px rgb(113, 107, 107);
+        }
+
+        input[type="text"] {
+            margin-top: 10px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid rgb(15, 17, 15);
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .ke {
+            color: black;
+            background-color: aqua;
+            border-radius: 20px;
+            margin-left: 65px;
+            margin-top: 20px;
+            width: 65px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        fieldset {
+            height: 200px;
+            width: 200px;
+            border-radius: 25px;
+            margin: auto;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="box">
+            <fieldset>
+                <legend>Sign in</legend>
+                <form class="content" action="post">
+                    <label for="username">E-mail : <br> </label>
+                    <input type="text" id="username" name="username" placeholder="abcd@gmail.com" required><br>
+                    <label for="text">Password:<br></label>
+                    <input type="text" id="email" name="email" placeholder="xxxxxx" minlength="6"><br>
+                    <input class="ke" type="button" value="sign in">
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>
