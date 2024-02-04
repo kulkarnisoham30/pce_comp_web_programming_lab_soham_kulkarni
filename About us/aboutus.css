@@ -1,0 +1,81 @@
+.photo {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 40px;
+    margin: auto;
+    background-color: red;
+    height: 620px;
+
+    border-radius: 30px;
+    background-image: url(https://th.bing.com/th/id/OIG2.JtexO8eOUVpYtOQJX7li?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
+    background-size: cover;
+    background-position: center-top;
+    background-repeat: no-repeat
+}
+
+.ourstory {
+    border: 2px solid rgb(78, 135, 21);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 11px black;
+    background-color: rgb(193, 252, 252);
+    cursor: pointer;
+}
+    
+
+    
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 1px 1px rgb(231, 235, 144);
+}
+
+.team {
+    display: flex;
+
+
+    gap: 150px;
+}
+
+video {
+    margin-left: 600px;
+    margin-top: 50px;
+}
+
+.intro {
+    margin-top: 50px;
+    text-align: center;
+}
+
+body {
+    background-color: antiquewhite;
+}
+.photogroup {
+    margin: auto;
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-image: url(https://th.bing.com/th/id/OIG1.Ni8qAnvO6cgkJyLHc4Gg?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
+    background-size: contain;
+    transition: transform 0.4s ease; 
+}
+
+.photogroup:hover {
+    transform: scale(1.2);
+}
+
+
+
+.foot {
+    border: 2px solid rgb(10, 10, 10);
+    padding: 40px;
+    background-color: grey;
+    border-radius: 10px;
+}
