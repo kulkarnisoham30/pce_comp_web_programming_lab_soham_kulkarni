@@ -7,15 +7,59 @@
     <title>Irrigate Smart | Optimize your irrigation with Weather Data</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="home.css">
+    
+
+    <script src="https://kit.fontawesome.com/3ea0667da6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+    
+    <!-- ---------------------------- NAVBAR ----------------------------  -->
 
-    <div class="nav1">
-        <p id="currentTime"></p>
-        <button>मराठी</button>
-    </div>
+    <nav>
+        <div class="nav1">
+            <p id="currentTime"></p>
+            <button>मराठी</button>
+            <span class="search-wrapper">
+                <input type="text" placeholder="Search here">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+        <div class="nav2">
+            <img src="" alt="Company logo!">
+        </div>
+    </nav>
+
+
+    <!-- ---------------------------- MAIN ----------------------------  -->
+
+    <main>
+        <img src="" alt="Information!">
+    </main>
+
+
+    <!-- ---------------------------- FOOTER ----------------------------  -->
+
+    <footer>
+        <div class="footer1">
+            <div class="contactus">
+                <h1>Contact Us</h1>
+                <ul>
+                    <a href="#"><li>facebook</li></a>
+                    <a href="#"><li>instagram</li></a>
+                    <a href="#"><li>linkedin</li></a>
+                    <a href="#"><li>twitter</li></a>
+                </ul>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6693194541426!2d73.12509517460626!3d18.990206054661556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel%20(Autonomous)!5e0!3m2!1sen!2sin!4v1707073675695!5m2!1sen!2sin" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer2">
+            <p>Made with  <i class="fa-solid fa-heart"></i>  by second year comp students from Pillai College of Engineering.</p>
+        </div>
+    </footer>
 
 
 
@@ -23,10 +67,9 @@
 
     <script>
         function updateClock() {
-            // Get current date and time
+
             const now = new Date();
 
-            // Define an array of month names
             const monthNames = [
                 "January",
                 "February",
@@ -42,7 +85,6 @@
                 "December",
             ];
 
-            // Format the time
             const dayOfWeek = new Intl.DateTimeFormat("en", { weekday: "long" }).format(
                 now
             );
@@ -54,24 +96,18 @@
             let seconds = now.getSeconds();
             const ampm = hours >= 12 ? "PM" : "AM";
 
-            // Adjust hours for 12-hour format and add leading zeros
             const formattedHours = (hours % 12 || 12).toString().padStart(2, "0");
 
-            // Add leading zeros to minutes and seconds
             minutes = minutes.toString().padStart(2, "0");
             seconds = seconds.toString().padStart(2, "0");
 
-            // Create the formatted time string
             const formattedTime = `${dayOfWeek}, ${month} ${day}, ${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
 
-            // Update the HTML element with the current time
             document.getElementById("currentTime").innerHTML = formattedTime;
         }
 
-        // Call the function initially
         updateClock();
 
-        // Update the time every second (1000 milliseconds)
         setInterval(updateClock, 1000);
     </script>
 
