@@ -114,10 +114,6 @@ main {
     text-wrap: wrap;
 }
 
-.footer2 p {
-    box-sizing: border-box;
-}
-
 .footer2 i {
     color: red;
 }

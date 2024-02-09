@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irrigate Smart | Optimize your irrigation with Weather Data</title>
+    <title>स्मार्ट सिंचन | हवामान माहितीसह तुमचे सिंचन ऑप्टिमाइझ करा</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="home.css">
 
@@ -20,12 +20,12 @@
     <nav>
         <div class="nav1">
             <p id="currentTime"></p>
-            <button><a href="marathi.html" id="languageLink">मराठी</a></button>
-            <a href="#">A-</a>
-            <a href="#">A</a>
-            <a href="#">A+</a>
+            <button><a href="home.html" id="languageLink">English</a></button>
+            <a href="#">अ-</a>
+            <a href="#">अ</a>
+            <a href="#">अ+</a>
             <span class="search-wrapper">
-                <input type="text" placeholder="Search here">
+                <input type="text" placeholder="येथे शोधा">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </span>
         </div>
@@ -47,7 +47,7 @@
     <footer>
         <div class="footer1">
             <div class="contactus">
-                <h1>About the Website</h1>
+                <h1>वेबसाइट बद्दल</h1>
                 <ul>
                     <a href="#">
                         <li><a href="#">point 1</a></li>
@@ -64,20 +64,19 @@
                 </ul>
             </div>
             <div class="contactus">
-                <h1>Contact Details</h1>
-                <h1>Contact Us</h1>
+                <h1>आमच्याशी संपर्क साधा</h1>
                 <ul>
                     <a href="#">
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i>फेसबुक</a></li>
                     </a>
                     <a href="#">
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i>इन्स्टाग्राम</a></li>
                     </a>
                     <a href="#">
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i>लिंक्डइन</a></li>
                     </a>
                     <a href="#">
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i>ट्विटर</a></li>
                     </a>
                 </ul>
             </div>
@@ -89,8 +88,7 @@
             </div>
         </div>
         <div class="footer2">
-            <p>Made with <i class="fa-solid fa-heart"></i> by second year Computer students from Pillai College of
-                Engineering.</p>
+            <p>हे संकेतस्थळ पिल्लई कॉलेज ऑफ इंजिनीअरिंगच्या द्वितीय वर्षाच्या विद्यार्थ्यांर्नी बनवलेले आहे!</p>
         </div>
     </footer>
 
@@ -100,27 +98,24 @@
 
     <script>
         function updateClock() {
-
             const now = new Date();
-
+    
             const monthNames = [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December",
+                "जानेवारी",
+                "फेब्रुवारी",
+                "मार्च",
+                "एप्रिल",
+                "मे",
+                "जून",
+                "जुलै",
+                "ऑगस्ट",
+                "सप्टेंबर",
+                "ऑक्टोबर",
+                "नोव्हेंबर",
+                "डिसेंबर",
             ];
-
-            const dayOfWeek = new Intl.DateTimeFormat("en", { weekday: "long" }).format(
-                now
-            );
+    
+            const dayOfWeek = new Intl.DateTimeFormat("mr", { weekday: "long" }).format(now);
             const month = monthNames[now.getMonth()];
             const day = now.getDate();
             const year = now.getFullYear();
@@ -128,31 +123,33 @@
             let minutes = now.getMinutes();
             let seconds = now.getSeconds();
             const ampm = hours >= 12 ? "PM" : "AM";
-
+    
             const formattedHours = (hours % 12 || 12).toString().padStart(2, "0");
-
+    
             minutes = minutes.toString().padStart(2, "0");
             seconds = seconds.toString().padStart(2, "0");
-
+    
             const formattedTime = `${dayOfWeek}, ${month} ${day}, ${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
-
+    
             document.getElementById("currentTime").innerHTML = formattedTime;
         }
-
+    
         updateClock();
-
+    
         setInterval(updateClock, 1000);
     </script>
 
     <script>
         function showAlert() {
-            alert("तुम्हाला वेबसाइटची भाषा मराठीत बदलायची आहे का?");
+            alert("Do you want to change the website language to English?");
         }
 
         var myLink = document.getElementById("languageLink");
 
         myLink.addEventListener("click", showAlert);
     </script>
+
+
 
 
 
