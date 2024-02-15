@@ -2,38 +2,51 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Title of the webpage -->
+    <title>Login Page</title>
+    <!-- Internal CSS styling -->
     <style>
+        /* Styling for the container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* Body background image and size */
+        body {
+            background-image: url(https://th.bing.com/th/id/OIG4.wYpe0LYYfpVwGX3kde62?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
+            background-size: cover;
+        }
+        /* Styling for the login box */
         .box {
-            background-image: url();
             display: flex;
             background-color: rgb(232, 252, 233);
             height: 80vh;
             width: 25vw;
             border: 2px solid black;
-            margin: auto;
-            margin-top: 50px;
             justify-self: center;
             align-items: center;
             border-radius: 25px;
             padding: 20px;
             box-shadow: 10px 10px 10px rgb(113, 107, 107);
         }
-
+        /* Styling for text input */
         input[type="text"] {
             margin-top: 10px;
             height: 20px;
             border-radius: 10px;
             border: 1px solid rgb(15, 17, 15);
         }
-
+        /* Styling for labels */
         label {
             margin-bottom: 10px;
             font-weight: bold;
         }
-
+        /* Styling for the register button */
         .ke {
             color: black;
             background-color: aqua;
@@ -44,29 +57,64 @@
             height: 30px;
             cursor: pointer;
         }
-
+        /* Styling for fieldset */
         fieldset {
-            height: 200px;
+            height: auto;
             width: 200px;
             border-radius: 25px;
             margin: auto;
             background-color: aquamarine;
+            padding: 20px;
+        }
+        /* Styling for content */
+        .content {
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Styling for the forgot password and new user links */
+        span {
+            /* Aligning the links */
+            text-align: left;
+            /* Margin to separate links */
+            margin-right: 5px;
+            /* Link color */
+            color: blue;
+        }
+
+        /* Styling for the new user link */
+        span:nth-child(2) {
+            /* Aligning the link */
+            text-align: right;
+            /* Margin to separate links */
+            margin-left: 5px;
         }
     </style>
 </head>
 
 <body>
-    <div>
+    <!-- Container for the login box -->
+    <div class="container">
         <div class="box">
+            <!-- Fieldset with legend for login -->
             <fieldset>
-                <legend>Sign in</legend>
+                <!-- Legend for the fieldset -->
+                <legend>Login page</legend>
+                <!-- Form for user login -->
                 <form class="content" action="post">
-                    <label for="username">E-mail : <br> </label>
-                    <input type="text" id="username" name="username" placeholder="abcd@gmail.com" required><br>
-                    <label for="text">Password:<br></label>
-                    <input type="text" id="email" name="email" placeholder="xxxxxx" minlength="6"><br>
-                    <input class="ke" type="button" value="sign in">
+                    <!-- Email input field -->
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" placeholder="abcd@gmail.com" required><br>
+                    <!-- Password input field -->
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" name="password" placeholder="xxxxxxx" required><br>
+                    <!-- Submit button for user registration -->
+                    <button type="submit" class="ke">Register</button>
                 </form>
+                <!-- Link for password recovery -->
+                <span>Forgot password</span>
+                <!-- Link for new user registration -->
+                <span>New user</span>
             </fieldset>
         </div>
     </div>
