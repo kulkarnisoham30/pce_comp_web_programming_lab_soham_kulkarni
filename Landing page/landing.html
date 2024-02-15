@@ -3,24 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Irrigate Smart | Optimize Your Watering with Weather Data</title>
+    <title>Irrigate Smart</title>
     <link rel="stylesheet" type="text/css" href="landingstyles.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link href='https://fonts.googleapis.com/css?family=Leckerli One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Clicker Script' rel='stylesheet'>
   </head>
 
   <body>
     <header>
-        <img id="headerLogo" src="images/cavaLogo2.png" alt="Irrigate Smart logo" height="100%">
-    
+      <a href="landing.html"><img id="headerLogo" src="images/logo_transparent.png" alt="Irrigate Smart logo" height="100%"></a>
+      
       <nav class="navbar">
         <ul>
           <li><a target="_blank" title="abc" href="#">abc</a>
           </li>
-          <li><a target="_blank" title="About Us" href="#">About Us</a>
+          <li><a target="_blank" title="About Us" href="/About us/aboutus.html">About Us</a>
           </li>
-          <li><a target="_blank" title="Services" href="#services">Services </a>
+          <li><a target="_blank" title="Govt Schemes" href="#services">Services </a>
           </li>
-          <li><a target="_blank" title="Tetimonials" href="#testimonials">Testimonials</a>
+          <li><a target="_blank" title="login page" href="/Login and registration/login.html">Sign in</a>
           </li>
           <li><a title="Frequently Asked Questions" href="#faq">FAQ</a>
           </li>
@@ -37,41 +39,104 @@
         <p> Optimize irrigation scheduling with real-time forecasts, <p class="welcome-content">save water &
         boost yields!</p>
         </p>
-        <button class="btn" onclick="">Get Started ></button>
+        <button class="btn" autofocus onclick="window.open('/Login and registration/login.html','_blank')">Get Started ></button>
       </div>
     </main>
-
-    <div class="faq">
+<!----------------------- slide 2 ------------------------------------>
+    <div class="slide2">
+      <img class="slide2-img" alt="" src="./images/pexels-kelly-2382904.jpg" />
+      <h2>Join the Green Revolution:</h2>
+      <p> Sustainable irrigation made easy with Irrigate Smart </p>
+      <div class="list-slide2">
+        <ul>
+          <li>location-weather integration</li>
+          <li>database of diverse crop</li>
+          <li>track water consumption</li>
+          <li>suggest water conservation strategies</li>
+          <li>Irrigation recommendation engine</li>
+        </ul>
+      </div>
+    </div>
+<!-- ------------------------FAQ ------------------------------------>
+    <section class="faq" id="faq">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-item">
-        <button class="faq-question">What is this website about?</button>
-        <div class="faq-answer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="faq-question" aria-expanded="true" aria-controls="answer-1">1. What is irrigation scheduling and why is it important for farmers?</button>
+        <div class="faq-answer" id="answer-1">
+          <p>Irrigation scheduling is the process of determining when and how much water to apply to crops in order to optimize their growth and yield. It is important for farmers because it helps to ensure efficient water use, reduce water waste, and maximize crop productivity.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">How do I use this website?</button>
-        <div class="faq-answer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="faq-question" aria-expanded="false" aria-controls="answer-2">2. How does weather forecast play a role in irrigation scheduling?</button>
+        <div class="faq-answer" id="answer-2">
+          <p>The weather forecast is a key factor in irrigation scheduling as it provides valuable information about upcoming weather conditions, such as temperature, humidity, and precipitation. This information can help farmers determine the ideal timing and amount of water to apply to their crops.
+          </p>
         </div>
       </div>
-    </div>    
-
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer-3">3. How can your website help farmers improve their irrigation schedule using weather predictions?
+        </button>
+        <div class="faq-answer" id="answer-3">
+          <p>Our website utilizes real-time weather data and advanced algorithms to generate personalized irrigation schedules for farmers. By inputting their crop type, soil type, and location, farmers can receive accurate and timely recommendations for when and how much to irrigate their crops based on current and forecasted weather conditions.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer-4">4. How can farmers get started using your irrigation scheduling website?
+        </button>
+        <div class="faq-answer" id="answer-4">
+          <p>Farmers can create a free account on our website and input their crop type, soil type, and location to receive personalized irrigation schedules. They can also contact us for any further assistance or questions about using our website. 
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer-5">5. How often should farmers check the irrigation schedule on your website?
+        </button>
+        <div class="faq-answer" id="answer-5">
+          <p>We recommend checking the irrigation schedule on our website at least once a week, or more frequently if there are significant changes in weather forecast or crop growth.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer-6">6. Is there a cost to use your website?
+        </button>
+        <div class="faq-answer" id="answer-6">
+          <p>Our website is currently free to use, but we may offer premium features in the future for a fee. 
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer-7">7. Can I access the website on my mobile device?
+        </button>
+        <div class="faq-answer" id="answer-7">
+          <p>Yes, our website is mobile-friendly and can be accessed on any device with an internet connection.
+          </p>
+        </div>
+      </div>
+    </section>    
+<!----------------------- footer --------------------------->
     <footer>
       &copy; 2024, Irrigate Smart
       <br>
-      All trademarks and registered trademarks appearing on this site are the
-      property of their respective owners.
+      Made with ❤️ by Second year Comp students from Pillai College of Engineering
     </footer>
-
+<!---------------------- script ---------------------------->
     <script>
       const faqItems = document.querySelectorAll(".faq-item");
 
-      faqItems.forEach(faqItem => {
-        faqItem.querySelector(".faq-question").addEventListener("click", () => {
+      faqItems.forEach((faqItem, index) => {
+        const isActive = index === 0;
+        faqItem.classList.toggle("active", isActive);
+
+        const question = faqItem.querySelector(".faq-question");
+        const answer = faqItem.querySelector(".faq-answer");
+
+        question.addEventListener("click", () => {
           faqItem.classList.toggle("active");
+        question.setAttribute("aria-expanded", faqItem.classList.contains("active"));
+        answer.setAttribute("aria-hidden", !faqItem.classList.contains("active")); //This informs assistive technologies about the expanded/collapsed state of each answer
         });
-      });
+      }); 
 
     </script>
   </body>

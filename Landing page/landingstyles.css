@@ -1,33 +1,35 @@
 body {
-    background-image: url("images/bgfarm2.jpg");
+    background-image: url("images/bgfarm3.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     margin: 0px;
 }
 
 header {
-  background-color: #035e3d;
+  /* background-color: #035e3d; */
   height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 10px;
   margin-bottom: 0px;
   margin-left: 10px;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  /*
+  align-items: center;
+  overflow: hidden; */
 }
 
 #headerLogo {
   float: left;
   flex-shrink: 0;
   margin-left: 50px;
+  margin-top: 10px;
 }
 
 main {
   margin-top: 10px;
   margin-right: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 25px;
   margin-left: 10px;
   height: 485px;
 }
@@ -35,9 +37,10 @@ main {
 #part2 {
   background-image: url(images/featuresbg.png);
 }
-
+/*------------------ NAVBAR ----------------------*/
 nav {
-  float: right;
+  display: flex;
+  align-items: center;
   margin-right: 50px;
 }
 
@@ -53,30 +56,35 @@ li {
 }
 
 li a {
-  display: block;
+  font-family: Helvetica, Arial, sans-serif;
   text-decoration: none;
   text-align: center;
-  color: #efe5d0;
-  padding: 10px 20px;
-  font-size: 17px;
+  color: #140e02;
+  padding: 0px 20px;
+  font-size: 15px;
 }
 
 li a:hover {
-  background-color: #111;
+  color: #f1680d;
+}
+/*-------------- HOME CONTENT ---------------*/
+.welcome-content{
+  display: block;
+  width: 576px;
 }
 
 .welcome-content h1{
     line-height: 4.75rem;
     font-family: "Google Sans","Helvetica Neue",sans-serif;
-    font-size: 70px;
-    letter-spacing: -4px;
+    font-size: 65px;
+    letter-spacing: -3px;
     margin-top: 100px;
     margin-bottom: 0;
     margin-left: 150px;
 }
 
 .welcome-content h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 2rem;
     font-family: "Google Sans","Helvetica Neue",sans-serif;
@@ -93,19 +101,19 @@ li a:hover {
 
 .btn {
     font-size: 20px;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
     padding: 10px 24px;
     margin-top: 20px;
     margin-left: 150px;
-    border-style: solid;
     border-width: 0.0675rem;
     border-radius: 0.1875rem;
     border-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     background-color: white; 
     color: #035e3d; 
-    border: 2px solid #04AA6D;
+    border: 2px groove #04AA6D;
 }
 
 .btn:hover {
@@ -113,30 +121,105 @@ li a:hover {
     color: #efe5d0;
 }
 
-footer {
-  background-color: #035e3d;
-  color: #efe5d0;
-  text-align: center;
-  padding: 15px;
-  margin-top: 0px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-size: 90%;
+/* -----------------------SLIDE2 ----------------------*/
+.slide2 {
+  position: relative;
+  height: 722px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background: #004545;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.slide2-img {
+  position: absolute;
+  top: 66px;
+  left: 66px;
+  border-radius: 27px;
+  width: 840px;
+  height: 589px;
+  object-fit: cover;
 }
 
+.slide2 h2 {
+  position: absolute;
+  font-size: 48px;
+  font-weight: bold;
+  top: 80px;
+  left: 985px;
+  color: #228468;
+}
+
+.slide2 p {
+  position: absolute;
+  font-family: 'Leckerli One', sans-serif;
+  font-size: 35px;
+  color: #ffffff;
+  top: 208px;
+  left: 985px;
+  display: inline-block;
+  width: 407px;
+  height: 125px;
+}
+
+.list-slide2 {
+  position: absolute;
+  font-family: 'Clicker Script';
+  font-size: 32px;
+  color: #ffffff;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  top: 382px;
+  left: 985px;
+  height: fit-content;
+}
+
+.list-slide2 li {
+  line-height: 1.5;
+  padding: 5px 10px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.list-slide2 li:hover {
+  background-color: #eaeaea;
+  color: #035e3d;
+}
+
+/*-------------------------FAQ------------------------*/
 .faq {
-  margin: 20px auto;
-  max-width: 800px;
+  margin: 2em auto; /*32px*/
+  max-width: 1050px;
+  padding: 1em; /*16px*/
+  padding-bottom: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .faq-item {
   margin-bottom: 15px;
 }
 
+.faq h2 {
+  position: relative;
+  font-family: "Netflix Sans","Helvetica Neue",sans-serif;
+  font-size: 48px;
+  letter-spacing: -2px;
+  top: 50%;
+  left: 13%;
+  margin: 0;
+  padding: 3%;
+  font-weight: 900;
+}
+
 .faq-question {
+  font-size: 1.2em;
   background-color: #f1f1f1;
-  padding: 15px 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -150,21 +233,26 @@ footer {
 
 .faq-answer {
   display: none;
+  font-size: 1.2em;
   padding: 0 20px 15px 20px;
   background-color: #fafafa;
+  margin-bottom: 0;
 }
 
 .faq-item.active .faq-answer {
   display: block;
 }
 
-.faq h2 {
-  position: relative;
-  font-family: "Netflix Sans","Helvetica Neue",sans-serif;
-  font-size: 48px;
-  letter-spacing: -2px;
-  top: 50%;
-  left: 15%;
-  margin: 0;
-  padding: 3%;
+/*------------ footer ---------------*/
+
+footer {
+  background-color: #035e3d;
+  color: #efe5d0;
+  text-align: center;
+  padding: 15px;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 90%;
 }
