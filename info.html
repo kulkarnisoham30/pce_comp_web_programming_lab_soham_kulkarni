@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Data</title>
+    <style>
+        body {
+            background-color: rgb(190, 246, 246);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-img {
+            width: 100%;
+            height: 20%;
+            /* Set the width to cover the entire width */
+        }
+
+        .table {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .photo {
+            background-image: url(https://th.bing.com/th/id/OIG1.HAzKQ5hmmkIHqi0UHQ7f?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
+            padding: 200px;
+            margin: 0%;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+
+        .schemes {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .schemes h2 {
+            color: #333;
+        }
+
+        .schemes ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .schemes li {
+            margin-bottom: 15px;
+        }
+
+        .schemes p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="photo"> </div>
+    <div class="table">
+        <h2>Info regarding suitable conditions</h2>
+        <p>This table displays data for various cities including their location, average temperature, suitable crops,
+            and irrigation water required. Each row represents data for a different city.</p>
+
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>Avg Temp (°C)</th>
+                <th>Suitable Crops</th>
+                <th>Irrigation Water Required (liters)</th>
+            </tr>
+            <tr>
+                <td>New Delhi</td>
+                <td>25</td>
+                <td>Rice, Wheat, Sugarcane</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Mumbai</td>
+                <td>28</td>
+                <td>Cotton, Pulses, Sugarcane</td>
+                <td>5500</td>
+            </tr>
+            <tr>
+                <td>Bengaluru</td>
+                <td>22</td>
+                <td>Vegetables, Fruits</td>
+                <td>4500</td>
+            </tr>
+            <tr>
+                <td>Kolkata</td>
+                <td>27</td>
+                <td>Rice, Jute, Sugarcane</td>
+                <td>5200</td>
+            </tr>
+            <tr>
+                <td>Chennai</td>
+                <td>30</td>
+                <td>Rice, Pulses, Cotton</td>
+                <td>5800</td>
+            </tr>
+            <tr>
+                <td>Hyderabad</td>
+                <td>29</td>
+                <td>Rice, Cotton, Maize</td>
+                <td>5700</td>
+            </tr>
+            <tr>
+                <td>Pune</td>
+                <td>26</td>
+                <td>Wheat, Sugarcane, Fruits</td>
+                <td>5400</td>
+            </tr>
+            <tr>
+                <td>Ahmedabad</td>
+                <td>31</td>
+                <td>Cotton, Groundnut, Tobacco</td>
+                <td>5900</td>
+            </tr>
+            <tr>
+                <td>Jaipur</td>
+                <td>28</td>
+                <td>Wheat, Barley, Pulses</td>
+                <td>5600</td>
+            </tr>
+            <tr>
+                <td>Lucknow</td>
+                <td>26</td>
+                <td>Rice, Wheat, Sugarcane</td>
+                <td>5500</td>
+            </tr>
+            <tr>
+                <td>Delhi</td>
+                <td>24</td>
+                <td>Wheat, Rice, Vegetables</td>
+                <td>4800</td>
+            </tr>
+            <tr>
+                <td>Jaipur</td>
+                <td>30</td>
+                <td>Wheat, Barley, Pulses</td>
+                <td>5800</td>
+            </tr>
+            <tr>
+                <td>Chandigarh</td>
+                <td>22</td>
+                <td>Wheat, Maize, Vegetables</td>
+                <td>4700</td>
+            </tr>
+            <tr>
+                <td>Patna</td>
+                <td>28</td>
+                <td>Rice, Wheat, Sugarcane</td>
+                <td>5400</td>
+            </tr>
+            <tr>
+                <td>Dehradun</td>
+                <td>21</td>
+                <td>Rice, Corn, Wheat</td>
+                <td>4600</td>
+            </tr>
+            <tr>
+                <td>Ranchi</td>
+                <td>25</td>
+                <td>Rice, Corn, Sugarcane</td>
+                <td>5100</td>
+            </tr>
+            <tr>
+                <td>Thiruvananthapuram</td>
+                <td>28</td>
+                <td>Rice, Coconut, Spices</td>
+                <td>5300</td>
+            </tr>
+            <tr>
+                <td>Guwahati</td>
+                <td>26</td>
+                <td>Tea, Rice, Sugarcane</td>
+                <td>5200</td>
+            </tr>
+            <tr>
+                <td>Shimla</td>
+                <td>18</td>
+                <td>Apples, Wheat, Barley</td>
+                <td>4400</td>
+            </tr>
+            <tr>
+                <td>Amritsar</td>
+                <td>24</td>
+                <td>Wheat, Maize, Vegetables</td>
+                <td>4700</td>
+            </tr>
+        </table>
+
+    </div>
+    <div style="background-color: hsl(76, 62%, 65%);"class="schemes">
+        <h2>Government Schemes for Farmers</h2>
+        <p>Here are some of the government schemes aimed at supporting farmers:</p>
+        <ul>
+            <li>
+                Pradhan Mantri Kisan Samman Nidhi (PM-KISAN):
+                <p>PM-KISAN provides direct income support to small and marginal farmers by transferring an amount of
+                    Rs. 6000 per year in three equal installments directly into their bank accounts.</p>
+            </li>
+            <li>
+                Pradhan Mantri Fasal Bima Yojana (PMFBY):
+                <p>PMFBY is an insurance scheme that provides financial support to farmers in case of crop failure due
+                    to natural calamities, pests, or diseases. It aims to ensure that farmers receive fair compensation
+                    for their losses.</p>
+            </li>
+            <li>
+                Kisan Credit Card (KCC) Scheme:
+                <p>The KCC scheme provides farmers with access to affordable credit for agricultural and allied
+                    activities. It helps farmers meet their short-term credit needs without relying on informal sources
+                    of credit at high interest rates.</p>
+            </li>
+            <li>
+                Soil Health Card Scheme:
+                <p>The Soil Health Card scheme aims to provide soil health cards to farmers which contain information
+                    about soil nutrient status and recommendations for appropriate measures to improve soil health. It
+                    helps farmers make informed decisions about fertilizer application and soil management practices.
+                </p>
+            </li>
+            <li>
+                Pradhan Mantri Krishi Sinchayee Yojana (PMKSY):
+                <p>PMKSY aims to improve the availability of water for agricultural purposes by providing irrigation
+                    infrastructure and efficient water management practices. It promotes the use of water-saving
+                    technologies and encourages farmers to adopt sustainable water management practices.</p>
+            </li>
+        </ul>
+        <p>These schemes are designed to empower farmers and improve their livelihoods. Farmers are encouraged to take
+            advantage of these schemes by contacting their nearest agriculture office or visiting the official
+            government websites for more information.</p>
+    </div>
+
+
+</body>
+
+</html>
