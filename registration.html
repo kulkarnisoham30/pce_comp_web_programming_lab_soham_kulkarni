@@ -2,53 +2,58 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- CSS Styles -->
     <style>
-        div {
-            background-image: url();
+        body {
+            /* Background image */
+            background-image: url(https://th.bing.com/th/id/OIG4.wYpe0LYYfpVwGX3kde62?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
+            background-size: cover;
+        }
+
+        /* Styling for the main container */
+        div.hi {
             border-radius: 25px;
             background-size: cover;
             padding: 10px;
-            margin: 23%;
-            border: 45px;
-            margin-top: 150px;
-            background-color: rgba(189, 243, 174, 0.76);
-            height: 600px;
+            margin: 0 auto; 
+            /* Center the div horizontally */
+            margin-top: 10%; /* Adjust margin from top */
+            background-color: rgb(232, 252, 233);
+            height: auto; 
+            /* Allow height to adjust based on content */
             width: 500px;
             overflow: hidden;
-        }
-
-        .hi {
-            box-shadow: 10px 20px 20px rgb(70, 68, 68);
-            text-align: center;
-
+            max-height: 100%;
+            /* Set a maximum height */
         }
 
         fieldset {
             color: rgb(13, 13, 13);
-            height: 570px;
-            width: 467px;
             border: 2px solid black;
+            margin: auto;
+            /* Center the fieldset horizontally */
+            /* Adjust margin from top */
         }
-
 
         button {
             background-color: rgba(8, 208, 71, 0.749);
             border-radius: 20px;
-            margin: 60px;
+            margin: 20px 0;
+            /* Adjust margin */
             height: 30px;
             width: 80px;
-            align-items: center;
             padding: 2px;
             text-align: center;
-        }
-
-        .k {
-            color: rgb(40, 32, 33);
-            font-weight: bolder;
-            padding: 12px;
+            display: block;
+            /* Ensure button is a block element */
+            margin-left: auto; 
+            /* Center button horizontally */
+            margin-right: auto;
+            /* Center button horizontally */
         }
 
         input[type="text"] {
@@ -56,25 +61,44 @@
             height: 30px;
             border-radius: 10px;
             color: rgb(8, 7, 7);
+            display: block;
+            /* Ensure input is a block element */
+            margin: auto;
+            /* Center input horizontally */
         }
+
+        /* Styling for labels */
+        .k {
+            text-align: center;
+            font-weight: 900;
+        }
+
     </style>
 </head>
 
 <body>
+    <!-- Main container for the registration form -->
     <div class="hi">
-
+        <!-- Registration form -->
         <form action="post"></form>
+        <!-- Fieldset for grouping form elements -->
         <fieldset style="border-radius: 25px;">
+            <!-- Legend for the fieldset -->
             <legend style="color: rgba(6, 27, 21, 0.856); font-weight: bold;">Registration page</legend>
+            <!-- Name input field -->
             <p class="k"> <label for="name">Name:</label></p>
             <input type="text" id="name" placeholder="Name" required>
+            <!-- Email input field -->
             <p class="k"> <label for="name">E-mail Id:</label></p>
             <input type="text" id="name" placeholder="abcd@gamil.com" required>
+            <!-- Phone number input field -->
             <p class="k"> <label for="name">Phone No:</label></p>
             <input type="text" id="name" placeholder="92932XXXXX" required>
-            <p class="k"> <label for="name">Address:</label></p>
-            <input type="text" id="name" placeholder="Address" required>
+            <!-- Address input field -->
+            <p class="k"> <label for="name">Password:</label></p>
+            <input type="text" id="name" placeholder="XXXXXX" required>
             <br>
+            <!-- Register button -->
             <button style="cursor: pointer;" type="submit">Register</button>
         </fieldset>
     </div>
