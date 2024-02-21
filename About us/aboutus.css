@@ -1,81 +1,90 @@
+/* Styling for the photo section */
 .photo {
-    border: 2px solid black;
-    padding: 20px;
-    margin: 40px;
-    margin: auto;
-    background-color: red;
+    border: 2px solid black; 
+    padding: 20px; 
+    margin: 40px auto;
+     /* Centering the box horizontally */
     height: 620px;
-
-    border-radius: 30px;
-    background-image: url(https://th.bing.com/th/id/OIG2.JtexO8eOUVpYtOQJX7li?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
-    background-size: cover;
-    background-position: center-top;
-    background-repeat: no-repeat
+    border-radius: 30px; 
+    background-image: url(https://th.bing.com/th/id/OIG2.JtexO8eOUVpYtOQJX7li?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn); 
+    background-size: cover; /* Cover the entire background with the image */
+    background-position: center top; /* Position the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
+/* Styling for the ourstory section */
 .ourstory {
-    border: 2px solid rgb(78, 135, 21);
-    display: flex;
-    justify-content: center;
+    border: 2px solid rgb(78, 135, 21); 
+    display: flex; 
+    justify-content: center; 
     text-align: center;
-    width: 500px;
-    margin: auto;
+    width: 500px; 
+    margin: auto; 
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 4px 4px 11px black;
-    background-color: rgb(193, 252, 252);
-    cursor: pointer;
+    border-radius: 20px; /* Rounded corners for the ourstory section */
+    box-shadow: 4px 4px 11px black; /* Drop shadow effect */
+    background-color: rgb(193, 252, 252); 
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    /* Font family */
+    font-size: medium;
+     /* Font size */
+    font-weight: 400; /* Font weight */
 }
-    
-
-    
 
 h1 {
-    text-align: center;
+    text-align: center; 
+    /* Center align h1 text */
     text-shadow: 2px 1px 1px rgb(231, 235, 144);
+     /* Text shadow effect */
 }
 
 .team {
-    display: flex;
-
-
-    gap: 150px;
+    display: flex; 
+    /* Use flexbox for layout */
+    gap: 150px; 
+    /* Gap between elements in the team section */
 }
 
 video {
-    margin-left: 600px;
-    margin-top: 50px;
+    margin-left: 600px; 
+    margin-top: 50px; 
 }
 
 .intro {
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 50px; 
+    text-align: center; 
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: antiquewhite; /* Background color for the body */
 }
+
 .photogroup {
-    margin: auto;
-    border: 2px solid black;
-    width: 300px;
+    margin: auto; 
+    /* Centering the box horizontally */
+    border: 2px solid black; 
+    width: 300px; 
     height: 300px;
     border-radius: 20px;
     margin-top: 40px;
-    background-image: url(https://th.bing.com/th/id/OIG1.Ni8qAnvO6cgkJyLHc4Gg?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
-    background-size: contain;
-    transition: transform 0.4s ease; 
+     /* Top margin for the photogroup */
+    background-image: url(https://th.bing.com/th/id/OIG1.Ni8qAnvO6cgkJyLHc4Gg?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn); /* Background image for the photogroup */
+    background-size: contain; 
+    /* Scale the background image to contain the container */
+    transition: transform 0.4s ease;
+     /* Apply transition to the background image */
 }
 
 .photogroup:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+     /* Scale up the container on hover */
 }
-
-
 
 .foot {
     border: 2px solid rgb(10, 10, 10);
-    padding: 40px;
-    background-color: grey;
-    border-radius: 10px;
+     /* Border color for the footer */
+    padding: 40px; 
+    background-color: grey; 
+    border-radius: 10px; 
 }
