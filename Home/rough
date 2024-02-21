@@ -1,0 +1,120 @@
+<body>
+    <div id="services">
+        <div class="containers">
+            <h1 class="sub-title">Best crops for all seasons</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2 class="id1">Front-End Web Development</h2>
+                    <p class="id1">HTML<br><br> CSS<br><br> Bootstrap<br><br> Java Script<br><br> React JS<br></p>
+                    <a href="#" class="id1">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-server"></i>
+                    <h2 class="id2">Back-End Web Development</h2>
+                    <p class="id2">PHP (Basic)<br><br> MySQL Database</p>
+                    <a href="#" class="id2">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-computer"></i>
+                    <h2 class="id3">Other Programming Languages</h2>
+                    <p class="id3">C Programming<br><br> DSA in C<br><br> Java<br><br> DSA in Java (Basic)<br><br> Python</p>
+                    <a href="#" class="id3">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#services {
+    padding: 130px 50px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list h2 {
+    color: #02ff6b;
+}
+
+.services-list:hover .id1 {
+    color: black;
+}
+
+.services-list:hover .id2 {
+    color: black;
+}
+
+.services-list:hover .id3 {
+    color: black;
+}
+
+.services-list:hover i {
+    color: black;
+}
+
+.services-list p {
+    font-size: 17px;
+    color: #e1e801;
+}
+
+.services-list p:hover {
+    font-size: 17px;
+    color: black;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    margin: 20px 0px 20px 0px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.services-list div a:hover {
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(0, 255, 0);
+    transform: translateX(10px);
+}
+
+.services-list div:hover {
+    color: black;
+    border: 4px solid gold;
+}
+
+.services-list div:hover {
+    background: lightskyblue;
+    transform: translateY(-10px);
+}

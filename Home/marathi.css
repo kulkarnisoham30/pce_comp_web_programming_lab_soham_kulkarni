@@ -17,6 +17,8 @@
     padding: 10px;
     box-sizing: border-box;
     position: fixed;
+    border-bottom: 1px solid black;
+    z-index: 1;
 }
 
 .nav1 button {
@@ -55,18 +57,92 @@
     color: red;
 }
 
-.nav2 {
-    padding-top: 30px;
-    width: 100vw;
-    box-sizing: border-box;
-    height: 160px;
-    background-color: white;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
+.nav1 span i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar1 {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #035e3d;
+    margin-top: 30px;
+}
+
+.logos img{
+    width: 28vw;
+    height: 8vh;
+    padding-left: 30px;
+    margin-right: 380px;
+}
+
+.names {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.names ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 2vw;
+}
+
+.names ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.learning {
+    background-color: #a41d31;
+    display: inline-block;
+    width: 83px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.learning ul li {
+    display: flex;
+    align-items: center;
+}
+
+.learning ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: whitesmoke;
+    padding-top: 11px;
+    padding-left: 9px;
+}
+
+.learning:hover {
+    background-color: #1B3058;
+}
+
+.names span ul li a:hover {
+    color: whitesmoke;
+}
+
+.navbar1 {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+
+.navbar1 a:hover {
+    color: #a41d31;
 }
 
 
-/* ---------------------------- MAIN ---------------------------- */
+/* ---------------------------- BODY ---------------------------- */
 
 main {
     height: 100vh;
@@ -76,42 +152,139 @@ main {
 
 /* ---------------------------- FOOTER ---------------------------- */
 
-.footer1 {
-    border-top: 1px solid black;
-    height: 300px;
-    width: 100vw;
-    padding: 50px;
-    box-sizing: border-box;
-    background-color: #1e312c;
+footer {
+    background-color: #1B3058;
+    width: 100%;
+    height: 42vh;
+    color: rgb(176, 176, 176);
+}
+
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 3px 30px;
 }
 
-.contactus {
-    width: 40%;
-    color: white;
-}
-
-.contactus ul {
-    list-style: none;
-}
-
-.contactus ul a {
+.container a {
     text-decoration: none;
     color: white;
+}
+
+.container a:hover {
+    color: rgb(0, 255, 60);
+}
+
+.container h4 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.contact {
+    height: 40px;
+    width: 30vw;
+    margin-left: 20px;
+}
+
+.contact p {
+    padding-top: 15px;
+}
+
+.contact h3,h5 {
+    color: white;
+}
+
+.contact pre {
+    color: white;
+}
+
+.academics {
+    height: 40px;
+    width: 20vw;
+}
+
+.academics h4 {
+    color: aqua;
+}
+
+.academics a {
+    display: block;
+    margin-bottom: 1px;
+}
+
+.connect {
+    height: 40px;
+    width: 20vw;
+}
+
+.connect h4 {
+    color: aqua;
+}
+
+.connect a {
+    display: block;
+    margin-bottom: 1px;
+}
+
+.connect a i {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.face:hover i {
+    color: #8ab4f8;
+}
+
+.twitter :hover i {
+    color: #548eeb;
+}
+
+.you:hover i {
+    color: #D70022;
+}
+
+.insta:hover i {
+    color: rgb(252, 86, 114);
+}
+
+.linked:hover i {
+    color: #8ab4f8;
+}
+
+.contact h4 {
+    color: aqua;
+}
+
+.map {
+    height: 40px;
+    width: 10px;
+}
+
+.map pre iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+    margin-left: -50px;
+    margin-top: -10px;
 }
 
 .footer2 {
     height: 50px;
     width: 100vw;
     box-sizing: border-box;
-    background-color: black;
+    background-color: #23427F;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-wrap: wrap;
+}
+
+.footer2 p {
+    box-sizing: border-box;
 }
 
 .footer2 i {
