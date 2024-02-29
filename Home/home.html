@@ -40,13 +40,15 @@
                     <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </nav>
 
 
     <!-- ---------------------------- BODY ----------------------------  -->
 
-    <body>
 
         <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
@@ -59,19 +61,19 @@
             <div class="mySlides fade">
                 <div class="numbertext">2 / 4</div>
                 <img src="images/intro2.jpg" style="width:100%">
-                <div class="text2">TAKE INFORMATION ABOUT THE WEATHER <br> OF THE UPCOMING 15 DAYS! <br><br><button>JOIN US</button></div>
+                <div class="text2">TAKE INFORMATION ABOUT THE WEATHER <br> OF THE UPCOMING 15 DAYS! <br><br><button>SEE WEATHER</button></div>
             </div>
     
             <div class="mySlides fade">
                 <div class="numbertext">3 / 4</div>
                 <img src="images/intro3.jpg" style="width:100%">
-                <div class="text3">SEE THE IRRIGATION SCHEDULER <br> TO EXPLORE MORE! <br><br><button>JOIN US</button></div>
+                <div class="text3">SEE THE IRRIGATION SCHEDULER <br> TO EXPLORE MORE! <br><br><a href="https://en.wikipedia.org/wiki/Irrigation_scheduling" target="_blank"><button>LEARN MORE</button></a></div>
             </div>
     
             <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
                 <img src="images/intro4.avif" style="width:100%">
-                <div class="text4">CONNECT WITH US AND <br> MAKE A HUGE PROGRESS IN AGRICULTURE. <br><br><button>JOIN US</button></div>
+                <div class="text4">CONNECT WITH US AND <br> MAKE A HUGE PROGRESS IN AGRICULTURE. <br><br><a href="../About us/aboutus.html"><button>CONNECT WITH US</button></a></div>
             </div>
     
             <!-- Next and previous buttons -->
@@ -160,16 +162,66 @@
         </div>
 
         <div id="faq">
-            <div class="containers">
-                <h1 class="sub-title1">
-                    FAQ
-                </h1>
-            </div>
-            
+            <section class="faq" id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="true" aria-controls="answer-1">1. What is irrigation scheduling and why is it important for farmers?</button>
+                  <div class="faq-answer" id="answer-1">
+                    <p>Irrigation scheduling is the process of determining when and how much water to apply to crops in order to optimize their growth and yield. It is important for farmers because it helps to ensure efficient water use, reduce water waste, and maximize crop productivity.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="answer-2">2. How does weather forecast play a role in irrigation scheduling?</button>
+                  <div class="faq-answer" id="answer-2">
+                    <p>The weather forecast is a key factor in irrigation scheduling as it provides valuable information about upcoming weather conditions, such as temperature, humidity, and precipitation. This information can help farmers determine the ideal timing and amount of water to apply to their crops.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="answer-3">3. How can your website help farmers improve their irrigation schedule using weather predictions?
+                  </button>
+                  <div class="faq-answer" id="answer-3">
+                    <p>Our website utilizes real-time weather data and advanced algorithms to generate personalized irrigation schedules for farmers. By inputting their crop type, soil type, and location, farmers can receive accurate and timely recommendations for when and how much to irrigate their crops based on current and forecasted weather conditions.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="answer-4">4. How can farmers get started using your irrigation scheduling website?
+                  </button>
+                  <div class="faq-answer" id="answer-4">
+                    <p>Farmers can create a free account on our website and input their crop type, soil type, and location to receive personalized irrigation schedules. They can also contact us for any further assistance or questions about using our website. 
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="answer-5">5. How often should farmers check the irrigation schedule on your website?
+                  </button>
+                  <div class="faq-answer" id="answer-5">
+                    <p>We recommend checking the irrigation schedule on our website at least once a week, or more frequently if there are significant changes in weather forecast or crop growth.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="answer-6">6. Is there a cost to use your website?
+                  </button>
+                  <div class="faq-answer" id="answer-6">
+                    <p>Our website is currently free to use, but we may offer premium features in the future for a fee. 
+                    </p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="answer-7">7. Can I access the website on my mobile device?
+                  </button>
+                  <div class="faq-answer" id="answer-7">
+                    <p>Yes, our website is mobile-friendly and can be accessed on any device with an internet connection.
+                    </p>
+                  </div>
+                </div>
+              </section>
         </div>
 
 
-    </body>
+ 
 
 
     <!-- ---------------------------- FOOTER ----------------------------  -->
@@ -200,8 +252,8 @@
                 <p>
                 <pre>Dr. K. M. Vasudevan Pillai Campus
 Plot No. 10, Sector 16, New Panvel ,
-Navi Mumbai, Mumbai – 410 206
-Maharashtra India
+Navi Mumbai, Mumbai – 410 206,
+Maharashtra, India.
                     </pre>
                 </p>
             </div>
@@ -209,6 +261,14 @@ Maharashtra India
                 <pre>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6693333701596!2d73.12540899129807!3d18.99020544053453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel%20(Autonomous)!5e0!3m2!1sen!2sin!4v1707763705177!5m2!1sen!2sin" width="350" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </pre>
+            </div>
+            <div class="icon_inline">
+                <h2>Connect:-</h2>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
@@ -334,6 +394,27 @@ Maharashtra India
         }
 
     </script>
+
+    <!-- ---------------------- FYQ SCRIPT ---------------------- -->
+
+    <script>
+        const faqItems = document.querySelectorAll(".faq-item");
+  
+        faqItems.forEach((faqItem, index) => {
+          const isActive = index === 0;
+          faqItem.classList.toggle("active", isActive);
+  
+          const question = faqItem.querySelector(".faq-question");
+          const answer = faqItem.querySelector(".faq-answer");
+  
+          question.addEventListener("click", () => {
+            faqItem.classList.toggle("active");
+          question.setAttribute("aria-expanded", faqItem.classList.contains("active"));
+          answer.setAttribute("aria-hidden", !faqItem.classList.contains("active")); //This informs assistive technologies about the expanded/collapsed state of each answer
+          });
+        }); 
+  
+      </script>
 
 
 

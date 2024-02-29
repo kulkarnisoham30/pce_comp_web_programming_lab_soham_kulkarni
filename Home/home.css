@@ -142,6 +142,10 @@
   color: #00ffd5;
 }
 
+.menu {
+  display: none;
+}
+
 /* ---------------------------- BODY ---------------------------- */
 
 body {
@@ -523,6 +527,63 @@ body {
     padding: 30px 50px 50px 50px;
 }
 
+.faq {
+  margin: 100px auto; /*32px*/
+  max-width: 1050px;
+  padding: 1em; /*16px*/
+  padding-bottom: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq h2 {
+  position: relative;
+  font-family: "Netflix Sans","Helvetica Neue",sans-serif;
+  font-size: 48px;
+  letter-spacing: -2px;
+  top: 50%;
+  left: 13%;
+  margin: 0;
+  padding: 3%;
+  font-weight: 900;
+}
+
+.faq-question {
+  font-size: 1.2em;
+  background-color: #f1f1f1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-weight: bold;
+}
+
+.faq-question:hover {
+  background-color: #2ef272;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 1.2em;
+  padding: 0 20px 15px 20px;
+  background-color: #fafafa;
+  margin-bottom: 0;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+
 /* ---------------------------- FOOTER ---------------------------- */
 
 footer {
@@ -608,6 +669,10 @@ h5 {
   padding-right: 10px;
 }
 
+.icon_inline {
+  display: none;
+}
+
 .face:hover i {
   color: #8ab4f8;
 }
@@ -667,14 +732,164 @@ h5 {
 
 /* ---------------------------- RESPONSIVE ---------------------------- */
 
-@media only screen and (min-width: 601px) and (max-width: 800px) {
+@media only screen and (min-width: 300px) and (max-width: 520px) {
+  .nav1 p {
+    display: none;
+  }
+  .navbar1 {
+    height: 100px;
+  }
+  .navbar1 .logos img {
+    height: 90px;
+    width: 150px;
+  }
+  .menu {
+    display: inline-flex;
+    margin-left: 84%;
+    margin-top: -100px;
+  }
+  .menu i {
+    color: white;
+    font-size: 30px;
+  }
+  .names {
+    display: none;
+  }
+  .text1 {
+    font-size: 15px;
+  }
+  .text2 {
+    font-size: 15px;
+  }
+  .text3 {
+    font-size: 15px;
+  }
+  .text4 {
+    font-size: 15px;
+  }
   .contact {
     display: none;
+  }
+  .map pre iframe {
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+  }
+  .left img {
+    width: 250px;
+    height: 200px;
+    margin-left: 10px;
+  }
+  .right {
+    width: 35%;
+    margin-left: -60px;
+  }
+  .icon_inline {
+    display: inline-block;
+    margin-top: 350px;
+    margin-left: -130px;
+  }
+  .icon_inline h2{
+    color: aqua;
+    margin-bottom: 10px;
+  }
+  .icon_inline a {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 767px) {
+  .left img {
+    width: 300px;
+    height: 200px;
+    margin-left: 25px;
+  }
+  .right {
+    width: 40%;
+    margin-left: -10px;
+  }
+  .map pre iframe {
+    width: 240px;
+    margin-left: -90px;
+    margin-top: 180px;
+  }
+}
+
+@media only screen and (max-width: 929px) {
+  .map {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .text3 {
+    left: 5%;
+  }
+  .text4 {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .connect {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 845px) {
+  .map pre iframe {
+    margin-left: -20px;
+    width: 285px;
+    height: 250px;
+  }
+  .left img {
+    width: 400px;
+    height: 280px;
+    margin-left: 20px;
+  }
+  .right {
+    width: 30%;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1220px) {
+  .navbar1 {
+    height: 100px;
+  }
+  .names {
+    margin-top: -100px;
+    margin-left: 49%;
   }
   .connect {
     margin-left: 30px;
   }
   .map {
     margin-left: 80px;
+  }
+  .icon_inline {
+    display: inline-block;
+    color: white;
+    margin-top: 290px;
+    margin-left: 20px;
+  }
+  .icon_inline h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: aqua;
+  }
+  .icon_inline a {
+    padding-right: 30px;
+    font-size: x-large;
+  }
+  .left img {
+    height: 200px;
+    width: 400px;
+    margin-left: 10px;
+  }
+  .right {
+    margin-left: 20px;
   }
 }
