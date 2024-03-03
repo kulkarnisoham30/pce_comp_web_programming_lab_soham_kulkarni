@@ -1,3 +1,150 @@
+/* ----------------- NAVBAR -------------------- */
+
+.nav1 {
+    width: 100%;
+    height: 30px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+    margin-top: -139.9px;
+    margin-left: -10px;
+}
+
+.nav1 button {
+    background-color: green;
+    color: black;
+    border: black;
+    width: 90px;
+    height: 30px;
+    font-size: 18px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.nav1 button a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav1 input {
+    height: 23px;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.fa-magnifying-glass:hover {
+    transform: translateY(-40%);
+    color: red;
+}
+
+.nav1 span i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar1 {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+    margin-top: 30px;
+    margin-left: -10px;
+}
+
+.logos img {
+    width: 28vw;
+    height: 8vh;
+    padding-left: 30px;
+    margin-right: 350px;
+}
+
+.names {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.names ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1vw;
+}
+
+.names ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.learning {
+    background-color: #00ffd5;
+    display: inline-block;
+    width: 83px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.learning ul li {
+    display: flex;
+    align-items: center;
+}
+
+.learning ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: whitesmoke;
+    padding-top: 11px;
+    padding-left: 9px;
+}
+
+.learning:hover {
+    background-color: #1b3058;
+}
+
+.names span ul li a:hover {
+    color: whitesmoke;
+}
+
+.navbar1 {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    border-bottom: 2px solid red;
+    border-top: 2px solid yellow;
+    box-sizing: border-box;
+}
+
+.navbar1 a:hover {
+    color: #00ffd5;
+}
+
+.menu {
+    display: none;
+}
+
+
+
 /* Styling for the photo section */
 .photo {
     border: 2px solid black; 
@@ -46,9 +193,26 @@ h1 {
     /* Gap between elements in the team section */
 }
 
+/* video {
+  margin: auto;
+  height: 400px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.Audio {
+  width: 700px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+} */
+
 video {
-    margin-left: 600px; 
-    margin-top: 50px; 
+    margin: 50px 319px;
+    width: 600px;
+    height: 400px;
 }
 
 .intro {
@@ -57,7 +221,8 @@ video {
 }
 
 body {
-    background-color: antiquewhite; /* Background color for the body */
+    margin-top: 140px;
+    background-color: white; /* Background color for the body */
 }
 
 .photogroup {
@@ -81,10 +246,25 @@ body {
      /* Scale up the container on hover */
 }
 
-.foot {
-    border: 2px solid rgb(10, 10, 10);
-     /* Border color for the footer */
-    padding: 40px; 
-    background-color: grey; 
-    border-radius: 10px; 
+.footer2 {
+    height: 50px;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
+    border-top: 2px solid red;
+    margin-left: -10px;
+    margin-bottom: -10px;
+}
+
+.footer2 p {
+    box-sizing: border-box;
+}
+
+.footer2 i {
+    color: red;
 }

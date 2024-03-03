@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>स्मार्ट सिंचन | हवामान माहितीसह तुमचे सिंचन ऑप्टिमाइझ करा</title>
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>Irrigate Smart | Optimize your irrigation with Weather Data</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="home.css">
 
 
@@ -20,28 +20,28 @@
     <nav>
         <div class="nav1">
             <p id="currentTime"></p>
-            <button><a href="home.html" id="languageLink">English</a></button>
-            <span>अक्षराचा आकार:   <i class="fa-regular fa-plus"></i>  <i class="fa-solid fa-minus"></i></span>
-            <!-- <a href="#">अ-</a>
-            <a href="#">अ</a>
-            <a href="#">अ+</a> -->
+            <button><a href="marathi.html" id="languageLink">मराठी</a></button>
+            <span>Font Size:   <i class="fa-regular fa-plus"></i>  <i class="fa-solid fa-minus"></i></span>
             <span class="search-wrapper">
-                <input type="text" placeholder="येथे शोधा">
+                <input type="text" placeholder="Search here">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </span>
         </div>
         <div class="navbar1">
             <div class="logos">
-                <a href="#" target="./blank"><img src="images/cavaLogo2.png" alt="Company Logo!"></a>
+                <a href="#" target="./blank"><img src="images/company logo.jpg" alt="Company Logo!"></a>
             </div>
             <div class="names">
                 <ul>
-                    <li><a href="#">मुख्यपृष्ठ</a></li>
-                    <li><a href="#">हवामान अंदाज</a></li>
-                    <li><a href="#">सिंचन शेड्युलर</a></li>
-                    <li><a href="#">संपर्क साधा</a></li>
-                    <li><a href="#">विचारले जाणारे प्रश्न</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Weather Forecast</a></li>
+                    <li><a href="#">Irrigation Scheduler</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </nav>
@@ -49,48 +49,160 @@
 
     <!-- ---------------------------- BODY ----------------------------  -->
 
-    <body>
+
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/intro1.jpg" style="width:100%">
+                <div class="text1">JOIN THE WORLD'S LARGEST IRRIGATION <br> SCHEDULER ON WEATHER FORECAST. <br><br><button>JOIN US</button></div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/intro2.jpg" style="width:100%">
+                <div class="text2">TAKE INFORMATION ABOUT THE WEATHER <br> OF THE UPCOMING 15 DAYS! <br><br><button>SEE WEATHER</button></div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/intro3.jpg" style="width:100%">
+                <div class="text3">SEE THE IRRIGATION SCHEDULER <br> TO EXPLORE MORE! <br><br><a href="https://en.wikipedia.org/wiki/Irrigation_scheduling" target="_blank"><button>LEARN MORE</button></a></div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/intro4.avif" style="width:100%">
+                <div class="text4">CONNECT WITH US AND <br> MAKE A HUGE PROGRESS IN AGRICULTURE. <br><br><a href="../About us/aboutus.html"><button>CONNECT WITH US</button></a></div>
+            </div>
+    
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+
         <div id="home">
             <div class="containers">
                 <h1 class="sub-title">
-                    सर्व हंगामासाठी सर्वोत्तम पिके
+                    Best crops for all seasons
                 </h1>
                 <div class="work-list">
                     <div class="work">
-                        <img class="ieee_web" src="images/cavaLogo2.png" alt="My_Work 1!">
+                        <img class="ieee_web" src="images/corn.webp" alt="My_Work 1!">
                         <div class="layer">
-                            <h3></h3>
+                            <h3>1) Corn</h3>
                             <p></p>
                             <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
                         </div>
                     </div>
                     <div class="work">
-                        <img class="clg_web" src="images/cavaLogo2.png" alt="My_Work 2!">
+                        <img class="clg_web" src="images/tommato.jpg" alt="My_Work 2!">
                         <div class="layer">
-                            <h3></h3>
+                            <h3>2) Tomato</h3>
                             <p></p>
                             <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
                         </div>
                     </div>
                     <div class="work">
-                        <img src="images/cavaLogo2.png" alt="My_Work 3!">
+                        <img src="images/Cucumber.webp" style="height: 400px;" alt="My_Work 3!">
                         <div class="layer">
-                            <h3></h3>
+                            <h3>3) Cucumber</h3>
                             <p></p>
                             <!-- <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
                         </div>
                     </div>
                 </div>
-                <a href="https://en.wikipedia.org/wiki/List_of_most_valuable_crops_and_livestock_products" class="btn" target="_blank">अजून पहा</a>
+                <a href="https://www.google.com/search?client=firefox-b-d&q=best+crop+for+all+seasons" class="btn" target="_blank">See More</a>
             </div>
         </div>
 
-        <div id="Aboutus">
-            
+        <div id="weather_forecast">
+            <div class="container2">
+                <h1 class="sub-title1">
+                    Weather Forecast
+                </h1>
+            </div>
+
         </div>
 
+        <div id="irrigation_scheduler">
+            <div class="container3">
+                <h1 class="sub-title1">
+                    Irrigation Scheduler
+                </h1>
+            </div>
+            <div class="pro_points">
+                <div class="left">
+                    <img src="images/drip irrigation.jpg" alt="image">
+                </div>
+                <div class="right">
+                    <p>One of the best irrigation system is DRIP irrigation system and we only use Drip Irrigation!</p>
+                    <h4>Pros of Drip Irrigation:-</h4>
+                    <ol>
+                        <li>No soil erosion</li>
+                        <li>Reduces weeds</li>
+                        <li>Water conservation</li>
+                        <li>Water efficiency</li>
+                        <li>Enhance crop yield</li>
+                        <li>Works with low pressure</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-    </body>
+        <!-- ---------------------- NEWS ---------------------- -->
+
+        <div class="news-banner-container">
+            <div class="banner-slide fade">
+                <div class="banner-counter">1 / 4</div>
+                <img src="images/intro1.jpg" style="width:100%">
+                <div class="banner-text-1">JOIN THE WORLD'S LARGEST IRRIGATION <br> SCHEDULER ON WEATHER FORECAST.<br><br><button>JOIN US</button></div>
+            </div>
+        
+            <div class="banner-slide fade">
+                <div class="banner-counter">2 / 4</div>
+                <img src="images/intro2.jpg" style="width:100%">
+                <div class="banner-text-2">TAKE INFORMATION ABOUT THE WEATHER <br> OF THE UPCOMING 15 DAYS! <br><br><button>SEE WEATHER</button></div>
+            </div>
+        
+            <div class="banner-slide fade">
+                <div class="banner-counter">3 / 4</div>
+                <img src="images/intro3.jpg" style="width:100%">
+                <div class="banner-text-3">SEE THE IRRIGATION SCHEDULER <br> TO EXPLORE MORE! <br><br><a href="https://en.wikipedia.org/wiki/Irrigation_scheduling" target="_blank"><button>LEARN MORE</button></a></div>
+            </div>
+        
+            <div class="banner-slide fade">
+                <div class="banner-counter">4 / 4</div>
+                <img src="images/intro4.avif" style="width:100%">
+                <div class="banner-text-4">CONNECT WITH US AND <br> MAKE A HUGE PROGRESS IN AGRICULTURE.<br><br><a href="../About us/aboutus.html"><button>CONNECT WITH US</button></a></div>
+            </div>
+        
+            <a class="banner-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="banner-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="banner-dot" onclick="currentSlide(1)"></span>
+            <span class="banner-dot" onclick="currentSlide(2)"></span>
+            <span class="banner-dot" onclick="currentSlide(3)"></span>
+            <span class="banner-dot" onclick="currentSlide(4)"></span>
+        </div>
+        
+
+
+ 
 
 
     <!-- ---------------------------- FOOTER ----------------------------  -->
@@ -98,32 +210,32 @@
     <footer>
         <div class="container">
             <div class="academics">
-                <h4>वेबसाइट बद्दल</h4>
-                <a href="#">मुख्यपृष्ठ</a><br>
-                <a href="#">आमच्याबद्दल</a><br>
-                <a href="#">आमचे काम</a><br>
-                <a href="#">विचारले जाणारे प्रश्न</a><br>
-                <a href="#">इतर पर्याय</a><br>
+                <h4>About this website</h4>
+                <a href="#">Home</a><br>
+                <a href="#">About Us</a><br>
+                <a href="#">Services</a><br>
+                <a href="#">FAQ</a><br>
+                <a href="#">Other Options</a><br>
                 </p>
             </div>
             <div class="connect">
-                <h4>सोबत जोडा</h4>
-                <p class="face"><a href="#"><i class="fab fa-facebook"></i>फेसबुक</a><br></p>
-                <p class="twitter"><a href="#"><i class="fab fa-twitter"></i>ट्विटर</a><br></p>
-                <p class="you"><a href="#"><i class="fab fa-youtube"></i>यूट्यूब</a><br></p>
-                <p class="insta"><a href="#"><i class="fab fa-instagram"></i>इन्स्टाग्राम</a><br></p>
-                <p class="linked"><a href="#"><i class="fab fa-linkedin"></i>लिंक्डइन</a><br></p>
+                <h4>Connect</h4>
+                <p class="face"><a href="#"><i class="fab fa-facebook"></i>Facebook</a><br></p>
+                <p class="twitter"><a href="#"><i class="fab fa-twitter"></i>Twitter</a><br></p>
+                <p class="you"><a href="#"><i class="fab fa-youtube"></i>YouTube</a><br></p>
+                <p class="insta"><a href="#"><i class="fab fa-instagram"></i>Instagram</a><br></p>
+                <p class="linked"><a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a><br></p>
             </div>
             <div class="contact">
-                <h4>संपर्क करा</h4>
-                <h3>पिल्लई कॉलेज ऑफ इंजिनीअरिंग</h3>
-                <h5>1999 पासून</h5>
+                <h4>Contact</h4>
+                <h3>Pillai college of Engineering</h3>
+                <h5>since 1999</h5>
                 <p>
-                <pre>डॉ. के. एम. वासुदेवन पिल्लई कॅम्पस
-प्लॉट नंबर 10, सेक्टर 16, नवीन पनवेल,
-नवी मुंबई, मुंबई – ४१० २०६
-महाराष्ट्र भारत.
-                </pre>
+                <pre>Dr. K. M. Vasudevan Pillai Campus
+Plot No. 10, Sector 16, New Panvel ,
+Navi Mumbai, Mumbai – 410 206,
+Maharashtra, India.
+                    </pre>
                 </p>
             </div>
             <div class="map">
@@ -131,38 +243,54 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6693333701596!2d73.12540899129807!3d18.99020544053453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel%20(Autonomous)!5e0!3m2!1sen!2sin!4v1707763705177!5m2!1sen!2sin" width="350" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </pre>
             </div>
+            <div class="icon_inline">
+                <h2>Connect:-</h2>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
     <div class="footer2">
-        <p>हे संकेतस्थळ पिल्लई कॉलेज ऑफ इंजिनीअरिंगच्या द्वितीय वर्षाच्या विद्यार्थ्यांर्नी बनवलेले आहे!
-        </p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by second year Computer students from Pillai College of
+            Engineering.</p>
     </div>
 
 
 
 
 
+    <!-- ---------------------------- JavaScript ---------------------------- -->
+
+
+    <!-- ------------------- Clock ------------------- -->
+    
     <script>
         function updateClock() {
+
             const now = new Date();
-    
+
             const monthNames = [
-                "जानेवारी",
-                "फेब्रुवारी",
-                "मार्च",
-                "एप्रिल",
-                "मे",
-                "जून",
-                "जुलै",
-                "ऑगस्ट",
-                "सप्टेंबर",
-                "ऑक्टोबर",
-                "नोव्हेंबर",
-                "डिसेंबर",
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
             ];
-    
-            const dayOfWeek = new Intl.DateTimeFormat("mr", { weekday: "long" }).format(now);
+
+            const dayOfWeek = new Intl.DateTimeFormat("en", { weekday: "long" }).format(
+                now
+            );
             const month = monthNames[now.getMonth()];
             const day = now.getDate();
             const year = now.getFullYear();
@@ -170,25 +298,27 @@
             let minutes = now.getMinutes();
             let seconds = now.getSeconds();
             const ampm = hours >= 12 ? "PM" : "AM";
-    
+
             const formattedHours = (hours % 12 || 12).toString().padStart(2, "0");
-    
+
             minutes = minutes.toString().padStart(2, "0");
             seconds = seconds.toString().padStart(2, "0");
-    
+
             const formattedTime = `${dayOfWeek}, ${month} ${day}, ${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
-    
+
             document.getElementById("currentTime").innerHTML = formattedTime;
         }
-    
+
         updateClock();
-    
+
         setInterval(updateClock, 1000);
     </script>
 
+    <!-- --------------- ALERT OF LANGUAGE CHANGE --------------- -->
+
     <script>
         function showAlert() {
-            alert("Do you want to change the website language to English?");
+            alert("तुम्हाला वेबसाइटची भाषा मराठीत बदलायची आहे का?");
         }
 
         var myLink = document.getElementById("languageLink");
@@ -196,99 +326,127 @@
         myLink.addEventListener("click", showAlert);
     </script>
 
+    <!-- ---------------- SIDE NAVBAR FOR MOBILE ---------------- -->
 
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- ---------------------- Slideshow ---------------------- -->
+
+    <script>
+
+        let currentSlideIndex = 1;
+        showSlides();
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(currentSlideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(currentSlideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n) {
+            currentSlideIndex = n;
+        } else {
+            currentSlideIndex++;
+        }
+
+        if (currentSlideIndex > slides.length) {
+            currentSlideIndex = 1;
+        }
+
+        if (currentSlideIndex < 1) {
+            currentSlideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[currentSlideIndex - 1].style.display = "block";
+        dots[currentSlideIndex - 1].className += " active";
+
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+    </script>
+
+    <!-- ------------------------- NEWS ------------------------- -->
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("banner-slide");
+        var dots = document.getElementsByClassName("banner-dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change the time in milliseconds here
+        }
+    </script>
+
+    <!-- ---------------------- FAQ SCRIPT ---------------------- -->
+
+    <script>
+        const faqItems = document.querySelectorAll(".faq-item");
+  
+        faqItems.forEach((faqItem, index) => {
+          const isActive = index === 0;
+          faqItem.classList.toggle("active", isActive);
+  
+          const question = faqItem.querySelector(".faq-question");
+          const answer = faqItem.querySelector(".faq-answer");
+  
+          question.addEventListener("click", () => {
+            faqItem.classList.toggle("active");
+          question.setAttribute("aria-expanded", faqItem.classList.contains("active"));
+          answer.setAttribute("aria-hidden", !faqItem.classList.contains("active")); //This informs assistive technologies about the expanded/collapsed state of each answer
+          });
+        }); 
+  
+      </script>
 
 
 
 </body>
 
 </html>
-
-
-
-
-
-<!-- wfnoiwqnfoiwnqoifnqwnfoqnwifnqiownfonqwfinqwf -->
-
-
-
-<div class="slideshow-container">
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 4</div>
-        <img src="images/intro1.jpg" style="width:100%">
-        <div class="text1">JOIN THE WORLD'S LARGEST IRRIGATION <br> SCHEDULER ON WEATHER FORECAST. <br><br><button>JOIN US</button></div>
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">2 / 4</div>
-        <img src="images/intro2.jpg" style="width:100%">
-        <div class="text2">TAKE INFORMATION ABOUT THE WEATHER <br> OF THE UPCOMING 15 DAYS! <br><br><button>SEE WEATHER</button></div>
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
-        <img src="images/intro3.jpg" style="width:100%">
-        <div class="text3">SEE THE IRRIGATION SCHEDULER <br> TO EXPLORE MORE! <br><br><a href="https://en.wikipedia.org/wiki/Irrigation_scheduling" target="_blank"><button>LEARN MORE</button></a></div>
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">4 / 4</div>
-        <img src="images/intro4.avif" style="width:100%">
-        <div class="text4">CONNECT WITH US AND <br> MAKE A HUGE PROGRESS IN AGRICULTURE. <br><br><a href="../About us/aboutus.html"><button>CONNECT WITH US</button></a></div>
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-</div>
-
-
-
-<div id="home">
-    <div class="containers">
-        <h1 class="sub-title">
-            सर्व हंगामासाठी सर्वोत्तम पिके
-        </h1>
-        <div class="work-list">
-            <div class="work">
-                <img class="ieee_web" src="images/corn.webp" alt="My_Work 1!">
-                <div class="layer">
-                    <h3></h3>
-                    <p></p>
-                    <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-            <div class="work">
-                <img class="clg_web" src="images/tommato.jpg" alt="My_Work 2!">
-                <div class="layer">
-                    <h3></h3>
-                    <p></p>
-                    <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Cucumber.webp" alt="My_Work 3!" style="height: 400px;">
-                <div class="layer">
-                    <h3></h3>
-                    <p></p>
-                    <!-- <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
-                </div>
-            </div>
-        </div>
-        <a href="https://en.wikipedia.org/wiki/List_of_most_valuable_crops_and_livestock_products" class="btn" target="_blank">अजून पहा</a>
-    </div>
-</div>
-
-<div id="Aboutus">
-    
-</div>

@@ -204,6 +204,11 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.prev,.next {
+  color: red;
+  margin-top: 20px;
+}
+
 /* Caption text */
 .text1 {
   color: blue;
@@ -334,6 +339,10 @@ body {
 .active,
 .dot:hover {
   background-color: #717171;
+}
+
+.active {
+  background-color: rgb(8, 0, 255);
 }
 
 /* Fading animation */
@@ -732,6 +741,95 @@ h5 {
 
 /* ---------------------------- RESPONSIVE ---------------------------- */
 
+@media only screen and (max-width: 299px) {
+  #currentTime {
+    display: none;
+  }
+  #time {
+    display: inline;
+  }
+  .search-wrapper input {
+    display: none;
+  }
+  .navbar1 {
+    height: 100px;
+  }
+  .logos a img {
+    width: 190px;
+    margin-left: -27px;
+  }
+  .names {
+    display: none;
+  }
+  .menu {
+    display: inline;
+    color: white;
+    margin-top: -100px;
+    margin-left: 83%;
+    z-index: 1;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .text1 {
+    font-size: 20px;
+    line-height: 38px;
+    width: 50%;
+    font-weight: bolder;
+    margin-top: -70px;
+  }
+  .text2 {
+    font-size: 20px;
+    line-height: 38px;
+    width: 50%;
+    font-weight: bolder;
+    margin-top: -70px;
+    color:#ff0000;
+  }
+  .text3 {
+    font-size: 20px;
+    line-height: 38px;
+    margin-left: 40px;
+    width: 50%;
+    font-weight: bolder;
+  }
+  .text4 {
+    font-size: 20px;
+    line-height: 38px;
+    width: 50%;
+    margin-left: 20px;
+    font-weight: bolder;
+  }
+  .containers {
+    margin-left: -40px;
+  }
+  .pro_points {
+    display: block;
+    width: 100%;
+  }
+  .left img {
+    width: 80vw;
+    margin-top: -20px;
+    margin-left: 30px;
+  }
+  .right p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-left: -60px;
+  }
+  .contact {
+    display: none;
+  }
+  .map pre iframe {
+    margin-left: -30px;
+    width: 59vw;
+  }
+  .footer2 {
+    height: 70px;
+    padding: 6px;
+  }
+}
+
 @media only screen and (min-width: 300px) and (max-width: 520px) {
   .nav1 p {
     display: none;
@@ -747,6 +845,7 @@ h5 {
     display: inline-flex;
     margin-left: 84%;
     margin-top: -100px;
+    cursor: pointer;
   }
   .menu i {
     color: white;
@@ -755,17 +854,53 @@ h5 {
   .names {
     display: none;
   }
+  .fade img {
+    filter: blur(5px);
+  }
   .text1 {
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 38px;
+    width: 50%;
+    font-weight: bolder;
+    margin-top: -70px;
   }
   .text2 {
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 38px;
+    width: 50%;
+    font-weight: bolder;
+    margin-top: -70px;
+    color:#ff0000;
   }
   .text3 {
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 38px;
+    margin-left: 90px;
+    width: 50%;
+    font-weight: bolder;
+    margin-left: 110px;
   }
   .text4 {
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 38px;
+    width: 50%;
+    margin-left: 20px;
+    font-weight: bolder;
+  }
+  .pro_points {
+    display: block;
+    width: 100%;
+  }
+  .left img {
+    width: 85vw;
+    margin-top: -20px;
+    margin-left: 30px;
+  }
+  .right p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin-left: -60px;
   }
   .contact {
     display: none;
@@ -775,18 +910,9 @@ h5 {
     height: 200px;
     padding: 30px;
   }
-  .left img {
-    width: 250px;
-    height: 200px;
-    margin-left: 10px;
-  }
-  .right {
-    width: 35%;
-    margin-left: -60px;
-  }
   .icon_inline {
     display: inline-block;
-    margin-top: 350px;
+    margin-top: 302px;
     margin-left: -130px;
   }
   .icon_inline h2{
@@ -797,9 +923,44 @@ h5 {
     font-size: 20px;
     margin-right: 20px;
   }
+  .map pre iframe {
+    width: 55vw;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 320px) {
+  .containers {
+    margin-left: -20px;
+  }
 }
 
 @media only screen and (min-width: 521px) and (max-width: 767px) {
+  .logos a img {
+    margin-top: 10px;
+  }
+  .names {
+    margin-top: -90px;
+    margin-left: 270px;
+    line-height: 34px;
+  }
+  .text1 {
+    font-size: 20px;
+    margin-top: -80px;
+    line-height: 38px;
+  }
+  .text2 {
+    font-size: 20px;
+    margin-top: -100px;
+  }
+  .text3 {
+    font-size: 20px;
+    line-height: 38px;
+    margin-left: 100px;
+  }
+  .text4 {
+    font-size: 20px;
+    line-height: 38px;
+  }
   .left img {
     width: 300px;
     height: 200px;
@@ -809,8 +970,12 @@ h5 {
     width: 40%;
     margin-left: -10px;
   }
+  .faq h2 {
+    left: 1%;
+  }
   .map pre iframe {
     width: 240px;
+    height: 150px;
     margin-left: -90px;
     margin-top: 180px;
   }
@@ -838,6 +1003,10 @@ h5 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 845px) {
+  .names {
+    margin-top: -90px;
+    margin-left: 300px;
+  }
   .map pre iframe {
     margin-left: -20px;
     width: 285px;
@@ -854,7 +1023,14 @@ h5 {
   }
 }
 
-@media only screen and (min-width: 930px) and (max-width: 1220px) {
+@media only screen and (min-width: 846px) and (max-width: 929px) {
+  .names {
+    margin-top: -100px;
+    margin-left: 44%;
+  }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1200px) {
   .navbar1 {
     height: 100px;
   }
@@ -866,7 +1042,7 @@ h5 {
     margin-left: 30px;
   }
   .map {
-    margin-left: 80px;
+    margin-left: 30px;
   }
   .icon_inline {
     display: inline-block;
@@ -891,5 +1067,15 @@ h5 {
   }
   .right {
     margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1230px) {
+  .names {
+    margin-top: -100px;
+    margin-left: 700px;
+  }
+  .map pre iframe {
+    margin-left: -80px;
   }
 }

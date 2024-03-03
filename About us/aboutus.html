@@ -9,13 +9,50 @@
     <title>About Us</title>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="aboutus.css">
+    <!-- Link of Favicon -->
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3ea0667da6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <!-- ---------------------- NAVBAR ---------------------- -->
+    <nav>
+        <div class="nav1">
+            <p id="currentTime"></p>
+            <button><a href="marathi.html" id="languageLink">मराठी</a></button>
+            <span>Font Size:   <i class="fa-regular fa-plus"></i>  <i class="fa-solid fa-minus"></i></span>
+            <span class="search-wrapper">
+                <input type="text" placeholder="Search here">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+        <div class="navbar1">
+            <div class="logos">
+                <a href="#" target="./blank"><img src="images/company logo.jpg" alt="Company Logo!"></a>
+            </div>
+            <div class="names">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Weather Forecast</a></li>
+                    <li><a href="#">Irrigation Scheduler</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+
+
     <!-- Photo section -->
-    <div class="photo">
-        <!-- Placeholder for photo content -->
-    </div>
+    <!-- <div class="photo">
+        Placeholder for photo content
+    </div> -->
 
     <!-- Heading for the About Us section -->
     <h1>About us</h1>
@@ -49,26 +86,70 @@
     <video src="" controls></video><br>
 
     <!-- Audio player with controls -->
-    <audio style="margin-left:600px" src="" controls></audio>
+    <audio class="Audio" style="margin-left:600px" src="" controls></audio>
 
     <!-- Footer section -->
-    <footer>
-        <!-- Footer content -->
-        <div class="foot">
-            <!-- Unordered list for navigation links -->
-            <ul style="display: flex; gap: 120px;">
-                <li>
-                    home
-                </li>
-                <li>contact us</li>
-                <li>About us</li>
-                <li>Social media</li>
-                <li>X</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-            </ul>
-        </div>
-    </footer>
+    <div class="footer2">
+        <p>&copy; 2024, Made with <i class="fa-solid fa-heart"></i> by second year Computer students from Pillai College of
+        Engineering.</p>
+    </div>
+
+
+
+
+
+    <!-- ---------------------------- JavaScript ---------------------------- -->
+
+
+    <!-- ------------------- Clock ------------------- -->
+
+    <script>
+        function updateClock() {
+
+            const now = new Date();
+
+            const monthNames = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
+
+            const dayOfWeek = new Intl.DateTimeFormat("en", { weekday: "long" }).format(
+                now
+            );
+            const month = monthNames[now.getMonth()];
+            const day = now.getDate();
+            const year = now.getFullYear();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            const ampm = hours >= 12 ? "PM" : "AM";
+
+            const formattedHours = (hours % 12 || 12).toString().padStart(2, "0");
+
+            minutes = minutes.toString().padStart(2, "0");
+            seconds = seconds.toString().padStart(2, "0");
+
+            const formattedTime = `${dayOfWeek}, ${month} ${day}, ${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
+
+            document.getElementById("currentTime").innerHTML = formattedTime;
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+    </script>
+    
+
 </body>
 
 </html>

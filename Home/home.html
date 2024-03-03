@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irrigate Smart | Optimize your irrigation with Weather Data</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon">
     <link rel="stylesheet" href="home.css">
 
 
@@ -109,7 +109,7 @@
                     <div class="work">
                         <img class="clg_web" src="images/tommato.jpg" alt="My_Work 2!">
                         <div class="layer">
-                            <h3>2) Tommato</h3>
+                            <h3>2) Tomato</h3>
                             <p></p>
                             <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
                         </div>
@@ -128,7 +128,7 @@
         </div>
 
         <div id="weather_forecast">
-            <div class="containers">
+            <div class="container2">
                 <h1 class="sub-title1">
                     Weather Forecast
                 </h1>
@@ -137,7 +137,7 @@
         </div>
 
         <div id="irrigation_scheduler">
-            <div class="containers">
+            <div class="container3">
                 <h1 class="sub-title1">
                     Irrigation Scheduler
                 </h1>
@@ -333,6 +333,8 @@ Maharashtra, India.
         setInterval(updateClock, 1000);
     </script>
 
+    <!-- --------------- ALERT OF LANGUAGE CHANGE --------------- -->
+
     <script>
         function showAlert() {
             alert("तुम्हाला वेबसाइटची भाषा मराठीत बदलायची आहे का?");
@@ -343,7 +345,20 @@ Maharashtra, India.
         myLink.addEventListener("click", showAlert);
     </script>
 
-    <!-- ------------------- Slideshow ------------------- -->
+    <!-- ---------------- SIDE NAVBAR FOR MOBILE ---------------- -->
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- ---------------------- Slideshow ---------------------- -->
 
     <script>
 
@@ -395,7 +410,7 @@ Maharashtra, India.
 
     </script>
 
-    <!-- ---------------------- FYQ SCRIPT ---------------------- -->
+    <!-- ---------------------- FAQ SCRIPT ---------------------- -->
 
     <script>
         const faqItems = document.querySelectorAll(".faq-item");
