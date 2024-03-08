@@ -372,10 +372,6 @@ body {
     margin-bottom: 85px;
 }
 
-.sub-title1 {
-    padding: 30px 50px 50px 50px;
-}
-
 .work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -479,14 +475,133 @@ body {
   color: white;
 }
 
-#weather_forecast {
-    height: 200px;
-    width: 95%;
-    box-sizing: border-box;
+#geolocation {
+  margin-bottom: 40px;
 }
 
-#irrigation_scheduler h1 {
-    padding: 50px 50px;
+.container1 p {
+  padding: 0px 80px;
+  margin-bottom: 15px;
+  font: 900;
+  font-size: larger;
+}
+
+.container1 button {
+  margin: 0px 80px;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: blue;
+}
+
+#in {
+  margin: 0px 80px;
+  width: 200px;
+  height: 35px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: blue;
+}
+
+#demo {
+  margin-left: 90px;
+  font-size: 16.5px;
+  margin-bottom: 50px;
+}
+
+.container1 button a {
+  text-decoration: none;
+  color: blue;
+}
+
+.sub-title2 {
+  padding: 0px 50px 50px 53px;
+}
+
+#weather_forecast {
+  width: 95%;
+  box-sizing: border-box;
+}
+
+.sub-title1 {
+  padding: 30px 50px 50px 50px;
+}
+
+#weatherForm {
+  padding: 0 80px;
+}
+
+#weatherForm label {
+  font-size: 20px;
+}
+
+#weatherForm input {
+  margin-left: 5px;
+  border: 1px solid rgb(0, 255, 0);
+  padding: 3px 6px 3px 6px;
+}
+
+#weatherForm button {
+  margin: 25px 0 0 180px;
+  height: 28px;
+  width: 100px;
+  color: darkmagenta;
+}
+
+#weatherResults {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.weather-card {
+  margin: 40px 25px -30px 0px;
+  width: 330px;
+  height: 220px;
+  border: 2px solid black;
+  background-image: url(images/Weather-forecast1.jpg);
+  background-size: 330px 220px;
+  background-repeat: no-repeat;
+  text-wrap: wrap;
+}
+
+.weather-card p:nth-child(1) {
+  color: rgb(0, 225, 255);
+  padding: 7px;
+  font-size: large;
+}
+
+.weather-card p:nth-child(1):hover {
+  font-size: 20px;
+}
+
+.weather-card p:nth-child(2) {
+  color: rgb(219, 255, 120);
+  padding: 7px;
+  font-size: large;
+}
+
+.weather-card p:nth-child(2):hover {
+  font-size: 20px;
+}
+
+.weather-card p:nth-child(3) {
+  color: rgb(140, 0, 255);
+  padding: 7px;
+  font-size: large;
+}
+
+.weather-card p:nth-child(3):hover {
+  font-size: 20px;
+}
+
+#irrigation_scheduler {
+  margin-top: -25px;
 }
 
 .pro_points {
@@ -912,8 +1027,8 @@ h5 {
   }
   .icon_inline {
     display: inline-block;
-    margin-top: 302px;
-    margin-left: -130px;
+    margin-top: 236px;
+    padding-left: 90px;
   }
   .icon_inline h2{
     color: aqua;
@@ -926,11 +1041,29 @@ h5 {
   .map pre iframe {
     width: 55vw;
   }
+  .footer2 {
+    padding: 7px;
+  }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 320px) {
   .containers {
     margin-left: -20px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 474px) {
+  #weatherForm input {
+    margin-top: 10px;
+  }
+  #weatherForm button {
+    margin-left: 60px;
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 390px) {
+  #weatherForm button {
+    margin-left: 60px;
   }
 }
 

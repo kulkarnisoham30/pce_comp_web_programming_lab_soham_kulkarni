@@ -129,13 +129,33 @@
         </div>
     </div>
 
+    <div id="geolocation">
+        <div class="container1">
+            <h1 class="sub-title2">
+                भौगोलिक स्थान
+            </h1>
+            <p>तुमचे निर्देशांक आणि शहराचे नाव मिळवण्यासाठी खालील बटणावर क्लिक करा:- </p>
+            <button onclick="getLocation()">हे दाबा</button>
+            <p id="demo"></p>
+            <p>काही प्रमुख शहरांमधील हवामानावरून पिकांच्या व्यवस्थापनाबाबत अधिक माहिती मिळवा:-</p>
+            <button id="in"><a href="../About us/info.html">माहिती मिळवा</a></button>
+        </div>
+    </div>
+
     <div id="weather_forecast">
-        <div class="containers">
+        <div class="container2">
             <h1 class="sub-title1">
                 हवामान अंदाज
             </h1>
+            <div class="weather_box">
+                <form id="weatherForm">
+                    <label for="cityInput">तुमच्या शहराचे नाव लिहा:</label>
+                    <input type="text" id="cityInput" placeholder="शहराचे नाव" required>
+                    <br><button type="button" onclick="getWeather()">हवामान पहा</button>
+                    <p id="weatherResults"></p>
+                </form>
+            </div>
         </div>
-
     </div>
 
     <div id="irrigation_scheduler">
@@ -273,7 +293,33 @@
 
 
 
+    <!-- ----------------------- JAVASCRIPT -----------------------  -->
 
+
+    <!-- ------------------- SCROLLING ------------------- -->
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                const navbarHeight = 130; // Adjust this value based on your fixed navbar height
+                const offsetTop = targetSection.offsetTop - navbarHeight;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+          });
+        });
+    </script>
+
+    <!-- ------------------- CLOCK ------------------- -->
 
     <script>
         function updateClock() {
@@ -318,6 +364,36 @@
         setInterval(updateClock, 1000);
     </script>
 
+    <!-- --------------- CHANGE FONT SIZE --------------- -->
+
+    <script>
+        
+        //     $(document).ready(function () {
+        //     // Get the default font size when the document is ready
+        //     var defaultFontSize = parseInt($('body').css('font-size'));
+    
+        //     // Increase font size
+        //     $('.fontSizeControls .fa-plus').on('click', function () {
+        //         changeFontSize(20); // You can adjust the step size as needed
+        //     });
+    
+        //     // Decrease font size
+        //     $('.fontSizeControls .fa-minus').on('click', function () {
+        //         changeFontSize(-20); // You can adjust the step size as needed
+        //     });
+    
+        //     // Function to change the font size
+        //     function changeFontSize(step) {
+        //         var currentFontSize = parseInt($('body').css('font-size'));
+        //         var newFontSize = currentFontSize + step;
+        //         $('body').css('font-size', newFontSize + 'px');
+        //     }
+        // });
+    
+        </script>
+
+    <!-- --------------- ALERT OF LANGUAGE CHANGE --------------- -->
+
     <script>
         function showAlert() {
             alert("Do you want to change the website language to English?");
@@ -328,8 +404,20 @@
         myLink.addEventListener("click", showAlert);
     </script>
 
+    <!-- ---------------- SIDE NAVBAR FOR MOBILE ---------------- -->
 
-    <!-- ------------------- Slideshow ------------------- -->
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+    <!-- ------------------- SLIDESHOW ------------------- -->
 
     <script>
 
@@ -381,6 +469,88 @@
 
     </script>
 
+    <!-- ------------------ TO GET GEOLOCATION ------------------ -->
+
+    <script>
+        const x = document.getElementById("demo");
+    
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showLocation);
+            } else {
+                x.innerHTML = "या ब्राउझरवर जिओलोकेशन समर्थित नाही.";
+            }
+        }
+    
+        function showLocation(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+    
+            // Using OpenCage Geocoding API for reverse geocoding
+            const apiKey = 'YOUR_OPENCAGE_API_KEY';
+            const apiUrl = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude}+${longitude}&pretty=1`;
+    
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const city = data.results[0]?.components.city || "शहर मिळालं नाही";
+                    x.innerHTML = `अक्षांश: ${latitude}<br>रेखांश: ${longitude}<br>शहराचे नाव:- ${city}`;
+                })
+                .catch(error => {
+                    console.error('डेटा मिळवताना त्रुटी:', error);
+                    x.innerHTML = `अक्षांश: ${latitude}<br>रेखांश: ${longitude}<br>शहर: शहर मिळालं नाही`;
+                });
+        }
+    </script>
+
+    <!-- ------------------ FOR WEATHER FORECAST ------------------ -->
+
+    <script>
+        function getWeather() {
+        const apiKey = '3a4c0d3e87aa45d388c8d5d8b4b3d5ca';
+        const cityInput = document.getElementById('cityInput').value;
+
+        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityInput}&appid=${apiKey}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => displayWeather(data))
+            .catch(error => console.error('Error fetching weather data:', error));
+        }
+
+        function displayWeather(data) {
+            const weatherResults = document.getElementById('weatherResults');
+
+            if (data.cod === '200') {
+                // Clear previous results
+                weatherResults.innerHTML = '';
+
+                // Display weather information for today, tomorrow, and the day after tomorrow
+                for (let i = 0; i < 3; i++) {
+                    const forecast = data.list[i * 8]; // Jump to the next day
+                    const date = new Date(forecast.dt * 1000);
+                    const dayOfWeek = new Intl.DateTimeFormat('en', { weekday: 'long' }).format(date);
+                    const formattedDate = `(${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()})`;
+
+                    // Convert temperature from Kelvin to Celsius
+                    const temperatureCelsius = (forecast.main.temp - 273.15).toFixed(2);
+
+                    const weatherInfo = `
+                        <div class="weather-card">
+                            <p>${dayOfWeek}, ${formattedDate}</p>
+                            <p>Temperature: ${temperatureCelsius}°C</p>
+                            <p>Weather: ${forecast.weather[0].description}</p>
+                        </div>
+                    `;
+
+                    weatherResults.innerHTML += weatherInfo;
+                }
+            } else {
+                // Display error message
+                weatherResults.innerHTML = `<p>Error: ${data.message}</p>`;
+            }
+        }
+    </script>
 
     <!-- ---------------------- FYQ SCRIPT ---------------------- -->
 
@@ -399,9 +569,8 @@
           question.setAttribute("aria-expanded", faqItem.classList.contains("active"));
           answer.setAttribute("aria-hidden", !faqItem.classList.contains("active")); //This informs assistive technologies about the expanded/collapsed state of each answer
           });
-        }); 
-  
-      </script>
+        });
+    </script>
 
 
 
