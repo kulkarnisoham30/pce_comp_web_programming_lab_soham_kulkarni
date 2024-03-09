@@ -193,21 +193,21 @@ h1 {
     /* Gap between elements in the team section */
 }
 
-/* video {
-  margin: auto;
-  height: 400px;
+video {
+  margin: 10px 100px;
+  padding: 0px 100px;
   justify-content: center;
-  display: flex;
+  display: flex;    
   align-items: center;
-  margin-top: 50px;
+  border: 1px solid #dddddd;
 }
 
 .Audio {
-  width: 700px;
+  /* width: 700px; */
   justify-content: center;
   display: flex;
   align-items: center;
-} */
+}
 
 video {
     margin: 50px 319px;
