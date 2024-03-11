@@ -9,7 +9,9 @@
     <title>Login Page</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <!-- Internal CSS styling -->
+   <script src="javascriptforvalidation.js"></script>
     <style>
+        
         /* Styling for the container */
         .container {
             display: flex;
@@ -37,6 +39,12 @@
         }
         /* Styling for text input */
         input[type="text"] {
+            margin-top: 10px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid rgb(15, 17, 15);
+        }
+        input[type="password"] {
             margin-top: 10px;
             height: 20px;
             border-radius: 10px;
@@ -90,10 +98,20 @@
             /* Margin to separate links */
             margin-left: 5px;
         }
+        #myCanvas {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
     </style>
+
+    
 </head>
 
 <body>
+    <canvas id="myCanvas" width="300" height="100"></canvas>
+
     <!-- Container for the login box -->
     <div class="container">
         <div class="box">
@@ -102,23 +120,35 @@
                 <!-- Legend for the fieldset -->
                 <legend>Login page</legend>
                 <!-- Form for user login -->
-                <form class="content" action="post">
+                <form class="content" action="#" onsubmit="return validateForm();">
                     <!-- Email input field -->
                     <label for="email">E-mail:</label>
                     <input type="text" id="email" name="email" placeholder="abcd@gmail.com" required><br>
                     <!-- Password input field -->
-                    <label for="text">Password:</label>
-                    <input type="text" id="pass" name="pass" placeholder="xxxxxxx" required><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="xxxxxxx" required><br>
                     <!-- Submit button for user registration -->
                     <button type="submit" class="ke">Register</button>
                 </form>
+                
                 <!-- Link for password recovery -->
                 <span>Forgot password</span>
                 <!-- Link for new user registration -->
                 <span>New user</span>
+                
             </fieldset>
         </div>
     </div>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        // Draw text with modified font size and weight
+        ctx.font = "bold 24px Arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Precision Irrigation,", 10, 30);
+        ctx.fillText("Prosperous Harvests", 10, 60);
+    </script>
 </body>
 
 </html>
