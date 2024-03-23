@@ -65,6 +65,7 @@ li a {
   color: #140e02;
   padding: 0px 20px;  
   font-size: 15px;
+  transition: color 0.3s ease-out;
 }
 
 li a:hover {
