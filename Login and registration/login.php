@@ -1,3 +1,57 @@
+<?php
+// PHP code for database connection and form handling
+// Database connection details (replace with your actual credentials)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "registration";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Define error variable
+$error = "";
+
+// Check if login form was submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Escape user input to prevent SQL injection
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    // Check if email and password are provided
+    if (empty($email) || empty($password)) {
+        $error = "Please enter your email and password.";
+    } else {
+        // Fetch user data based on email
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows === 1) {
+            $user = $result->fetch_assoc();  // Get user data as an associative array
+
+            // Verify password using password_verify (requires password_hash in registration)
+            if (password_verify($password, $user['password'])) {
+                // Login successful (redirect or start session)
+                session_start();  // Start session if not already started
+                $_SESSION['user_id'] = $user['id'];  // Store user ID in session
+                header("Location: ../Home/home.php");  // Replace with your home page or further actions
+                exit();  // Ensure script stops execution after redirection
+            } else {
+                $error = "Invalid email or password.";
+            }
+        } else {
+            $error = "Invalid email or password.";
+        }
+    }
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +63,7 @@
     <title>Login Page</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <!-- Internal CSS styling -->
-   <script src="/javascriptforvalidation.js"></script>
+    <script src="/javascriptforvalidation.js"></script>
     <style>
         
         /* Styling for the container */
@@ -109,12 +163,10 @@
         }
     </style>
 
-    
 </head>
 
 <body>
-    <canvas id="myCanvas" width="300" height="100"></canvas>
-
+    <!-- Your HTML content -->
     <!-- Container for the login box -->
     <div class="container">
         <div class="box">
@@ -123,10 +175,13 @@
                 <!-- Legend for the fieldset -->
                 <legend>Login page</legend>
                 <!-- Form for user login -->
-                <form class="content" action="#" onsubmit="return validateForm();">
+                <?php if (!empty($error)): ?>
+                    <p style="color: red;"><?php echo $error; ?></p>
+                <?php endif; ?>
+                <form class="content" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" onsubmit="return validateForm();" method="post">
                     <!-- Email input field -->
                     <label for="email">E-mail:</label>
-                    <input type="text" id="email" name="email" placeholder="abcd@gmail.com" required><br>
+                    <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required><br>
                     <!-- Password input field -->
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="xxxxxxx" required><br>
@@ -137,21 +192,11 @@
                 <!-- Link for password recovery -->
                 <span>Forgot password</span>
                 <!-- Link for new user registration -->
-                <a href="/Login and registration/registration.html">New user</a>
+                <a href="/Login and registration/registration.php">New user</a>
                 
             </fieldset>
         </div>
     </div>
-    <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-        
-        // Draw text with modified font size and weight
-        ctx.font = "bold 24px Arial";
-        ctx.fillStyle = "black";
-        ctx.fillText("Precision Irrigation,", 10, 30);
-        ctx.fillText("Prosperous Harvests", 10, 60);
-    </script>
 </body>
 
 </html>

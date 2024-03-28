@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <title>Document</title>
     <title>Login Page</title>
     <!-- CSS Styles -->
     <script src="/javascriptregistartion.js"></script>
@@ -93,7 +92,10 @@
     <div class="hi">
         <!-- Registration form -->
         <!-- Form for user login -->
-        <form class="content" name="myform" action="#" onsubmit="return validateForm();">
+        <?php if (isset($error)): ?>
+        <p style="color: red;"><?php echo $error; ?></p>
+    <?php endif; ?>
+        <form class="content" name="myform" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" onsubmit="return validateForm();" method="post">
             <!-- Fieldset for grouping form elements -->
             <fieldset style="border-radius: 25px;">
                 <canvas id="myCanvas" width="400" height="70"></canvas>
@@ -104,17 +106,17 @@
                 <input type="text" id="name" name="name" placeholder="Name" required>
                 <!-- Email input field -->
                 <p class="k"> <label for="email">E-mail Id:</label></p>
-                <input type="text" id="email" name="email" placeholder="abcd@gmail.com" required>
+                <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required>
                 <!-- Phone number input field -->
                 <p class="k"> <label for="phone">Phone No:</label></p>
                 <input type="text" id="phone" name="phone" placeholder="92932XXXXX" required>
                 <!-- Password input field -->
                 <p class="k"> <label for="password">Password:</label></p>
-                <input type="text" id="password" name="password" placeholder="XXXXXX" required>
+                <input type="password" id="password" name="password" placeholder="XXXXXX" required>
                 <br>
                 <!-- Register button -->
-                <button style="cursor: pointer;" type="submit">Register</button>
-                <div id="sign-in">Already a user? <a href="/Login and registration/login.html">Sign in</a></div>
+                <button style="cursor: pointer;" type="submit" name='submit' >Register</button>
+                <div id="sign-in">Already a user? <a href="login.php">Sign in</a></div>
             </fieldset>
         </form>
         
@@ -131,5 +133,77 @@
         ctx.fillText("Precision Irrigation,", 10, 30);
         ctx.fillText("Prosperous Harvests", 10, 60);
     </script>
+
+<?php
+
+
+// Database connection details (replace with your actual credentials)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "registration";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+
+if(isset($_POST['submit'])){
+
+    $name=$_POST['name'];
+    $phoneno=$_POST['phone'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+
+    $username = mysqli_real_escape_string($conn, $username );
+    $password = mysqli_real_escape_string($conn, $password );
+
+
+    $query = "SELECT * FROM users WHERE name = '{$name}' ";
+    $select_user_query = mysqli_query($conn,$query);
+ 
+    if(!$select_user_query){
+        die("QUERY FAILED".mysqli_error($conn));
+ 
+    }
+    
+    while($row = mysqli_fetch_array($select_user_query)){
+ 
+   
+        $db_user_id=$row['id'];
+        $db_username=$row['name'];
+        $db_user_password=$row['password'];
+        $db_email=$row['email'];
+        $db_user_phoneno=$row['phoneno'];
+     }
+
+    // if($name==$db_username){
+    //     echo"user already exist";
+    //     return;
+    // }
+
+
+    // <!-- password encrypition -->
+    
+    $encrypted_password=password_hash($password,PASSWORD_BCRYPT,array('cost' => 12));
+
+    $query = "INSERT INTO users(name,email,phoneno,password)";
+    $query .= " VALUES ('{$name}','{$email}','{$phoneno}','$encrypted_password')";
+
+    $result = mysqli_query($conn,$query);
+    if(!$result){
+        die('Query Failed'.mysqli_error($conn));
+    }
+}
+
+
+?>
+
+    
 </body>
 </html>
