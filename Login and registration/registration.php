@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <title>Login Page</title>
+    <title>Registration Page</title>
     <!-- CSS Styles -->
     <script src="/javascriptregistartion.js"></script>
     <style>
@@ -106,13 +106,13 @@
                 <input type="text" id="name" name="name" placeholder="Name" required>
                 <!-- Email input field -->
                 <p class="k"> <label for="email">E-mail Id:</label></p>
-                <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required>
+                <input type="text" id="email" name="email" placeholder="abcd@gmail.com" required>
                 <!-- Phone number input field -->
                 <p class="k"> <label for="phone">Phone No:</label></p>
                 <input type="text" id="phone" name="phone" placeholder="92932XXXXX" required>
                 <!-- Password input field -->
                 <p class="k"> <label for="password">Password:</label></p>
-                <input type="password" id="password" name="password" placeholder="XXXXXX" required>
+                <input type="text" id="password" name="password" placeholder="XXXXXX" required>
                 <br>
                 <!-- Register button -->
                 <button style="cursor: pointer;" type="submit" name='submit' >Register</button>
@@ -138,10 +138,10 @@
 
 
 // Database connection details (replace with your actual credentials)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "registration";
+$servername = "sql109.infinityfree.com";
+$username = "if0_36225012";
+$password = "Saahil19";
+$dbname = "if0_36225012_registration";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -183,12 +183,10 @@ if(isset($_POST['submit'])){
      }
 
     // if($name==$db_username){
-    //     echo"user already exist";
-    //     return;
-    // }
+    //      echo"user already exist";
+    //      return;
+    //  }
 
-
-    // <!-- password encrypition -->
     
     $encrypted_password=password_hash($password,PASSWORD_BCRYPT,array('cost' => 12));
 

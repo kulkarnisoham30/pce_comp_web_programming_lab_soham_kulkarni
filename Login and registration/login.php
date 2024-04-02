@@ -1,57 +1,62 @@
 <?php
 // PHP code for database connection and form handling
 // Database connection details (replace with your actual credentials)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "registration";
+try {
+    $servername = "sql109.infinityfree.com";
+    $username = "if0_36225012";
+    $password = "Saahil19";
+    $dbname = "if0_36225012_registration";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-// Define error variable
-$error = "";
+    // Define error variable
+    $error = "";
 
-// Check if login form was submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Escape user input to prevent SQL injection
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    // Check if login form was submitted
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Escape user input to prevent SQL injection
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    // Check if email and password are provided
-    if (empty($email) || empty($password)) {
-        $error = "Please enter your email and password.";
-    } else {
-        // Fetch user data based on email
-        $sql = "SELECT * FROM users WHERE email = '$email'";
-        $result = $conn->query($sql);
+        // Check if email and password are provided
+        if (empty($email) || empty($password)) {
+            $error = "Please enter your email and password.";
+        } else {
+            // Fetch user data based on email
+            $sql = "SELECT * FROM users WHERE email = '$email'";
+            $result = $conn->query($sql);
 
-        if ($result->num_rows === 1) {
-            $user = $result->fetch_assoc();  // Get user data as an associative array
+            if ($result->num_rows === 1) {
+                $user = $result->fetch_assoc();  // Get user data as an associative array
 
-            // Verify password using password_verify (requires password_hash in registration)
-            if (password_verify($password, $user['password'])) {
-                // Login successful (redirect or start session)
-                session_start();  // Start session if not already started
-                $_SESSION['user_id'] = $user['id'];  // Store user ID in session
-                header("Location: ../Home/home.php");  // Replace with your home page or further actions
-                exit();  // Ensure script stops execution after redirection
+                // Verify password using password_verify (requires password_hash in registration)
+                if (password_verify($password, $user['password'])) {
+                    // Login successful (redirect or start session)
+                    session_start();  // Start session if not already started
+                    $_SESSION['user_id'] = $user['id'];  // Store user ID in session
+                    header("Location: ../Home/home.php");  // Replace with your home page or further actions
+                    exit();  // Ensure script stops execution after redirection
+                } else {
+                    $error = "Invalid email or password.";
+                }
             } else {
                 $error = "Invalid email or password.";
             }
-        } else {
-            $error = "Invalid email or password.";
         }
     }
-}
 
-$conn->close();
+    $conn->close();
+} catch (Exception $e) {
+    $error = "Error: " . $e->getMessage();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +70,6 @@ $conn->close();
     <!-- Internal CSS styling -->
     <script src="/javascriptforvalidation.js"></script>
     <style>
-        
         /* Styling for the container */
         .container {
             display: flex;
@@ -73,11 +77,13 @@ $conn->close();
             align-items: center;
             height: 100vh;
         }
+
         /* Body background image and size */
         body {
             background-image: url(https://th.bing.com/th/id/OIG4.wYpe0LYYfpVwGX3kde62?w=270&h=270&c=6&r=0&o=5&dpr=2.5&pid=ImgGn);
             background-size: cover;
         }
+
         /* Styling for the login box */
         .box {
             display: flex;
@@ -91,6 +97,7 @@ $conn->close();
             padding: 20px;
             box-shadow: 10px 10px 10px rgb(113, 107, 107);
         }
+
         /* Styling for text input */
         input[type="text"] {
             margin-top: 10px;
@@ -98,17 +105,20 @@ $conn->close();
             border-radius: 10px;
             border: 1px solid rgb(15, 17, 15);
         }
+
         input[type="password"] {
             margin-top: 10px;
             height: 20px;
             border-radius: 10px;
             border: 1px solid rgb(15, 17, 15);
         }
+
         /* Styling for labels */
         label {
             margin-bottom: 10px;
             font-weight: bold;
         }
+
         /* Styling for the register button */
         .ke {
             color: black;
@@ -120,6 +130,7 @@ $conn->close();
             height: 30px;
             cursor: pointer;
         }
+
         /* Styling for fieldset */
         fieldset {
             height: auto;
@@ -129,12 +140,14 @@ $conn->close();
             background-color: aquamarine;
             padding: 20px;
         }
+
         /* Styling for content */
         .content {
             margin: auto;
             justify-content: center;
             align-items: center;
         }
+
         /* Styling for the forgot password and new user links */
         span {
             /* Aligning the links */
@@ -152,6 +165,7 @@ $conn->close();
             /* Margin to separate links */
             margin-left: 5px;
         }
+
         #myCanvas {
             position: absolute;
             top: 20px;
@@ -176,9 +190,12 @@ $conn->close();
                 <legend>Login page</legend>
                 <!-- Form for user login -->
                 <?php if (!empty($error)): ?>
-                    <p style="color: red;"><?php echo $error; ?></p>
+                    <p style="color: red;">
+                        <?php echo $error; ?>
+                    </p>
                 <?php endif; ?>
-                <form class="content" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" onsubmit="return validateForm();" method="post">
+                <form class="content" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+                    onsubmit="return validateForm();" method="post">
                     <!-- Email input field -->
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required><br>
@@ -186,14 +203,14 @@ $conn->close();
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="xxxxxxx" required><br>
                     <!-- Submit button for user registration -->
-                    <button type="submit" class="ke">Register</button>
+                    <button type="submit" class="ke">Log in</button>
                 </form>
-                
+
                 <!-- Link for password recovery -->
                 <span>Forgot password</span>
                 <!-- Link for new user registration -->
                 <a href="/Login and registration/registration.php">New user</a>
-                
+
             </fieldset>
         </div>
     </div>

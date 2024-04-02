@@ -29,7 +29,7 @@
         </div>
         <div class="navbar1">
             <div class="logos">
-                <a href="home.html" target="./blank"><img src="images/company logo.jpg" alt="Company Logo!"></a>
+                <a href="index.html" target="./blank"><img src="images/company logo.jpg" alt="Company Logo!"></a>
             </div>
             <div class="names">
                 <ul>
@@ -136,7 +136,7 @@
                 </h1>
                 <p>Click the button given below to get your coordinates and city name:- </p>
                 <button onclick="getLocation()">Try It</button>
-                <p id="demo"></p>
+                <p id="x"></p>
                 <p>Get more information on the management of the crops from the weather in some of the main cities:-</p>
                 <button id="in"><a href="../About us/info.html">Get Information</a></button>
             </div>
@@ -371,7 +371,7 @@ Maharashtra, India.
             minutes = minutes.toString().padStart(2, "0");
             seconds = seconds.toString().padStart(2, "0");
 
-            const formattedTime = ${dayOfWeek}, ${month} ${day}, ${year} ${formattedHours}:${minutes}:${seconds} ${ampm};
+            const formattedTime = `${dayOfWeek}, ${month} ${day}, ${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
 
             document.getElementById("currentTime").innerHTML = formattedTime;
         }
@@ -505,17 +505,17 @@ Maharashtra, India.
         
           // Using OpenCage Geocoding API for reverse geocoding
           const apiKey = 'YOUR_OPENCAGE_API_KEY';
-          const apiUrl = https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude}+${longitude}&pretty=1;
+          const apiUrl = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude}+${longitude}&pretty=1`;
         
           fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
               const city = data.results[0]?.components.city || "City Not Found";
-              x.innerHTML = Latitude: ${latitude}<br>Longitude: ${longitude}<br>City: ${city};
+              x.innerHTML = `Latitude: ${latitude}<br>Longitude: ${longitude}<br>City: ${city}`;
             })
             .catch(error => {
               console.error('Error fetching data:', error);
-              x.innerHTML = Latitude: ${latitude}<br>Longitude: ${longitude}<br>City: City not found;
+              x.innerHTML = `Latitude: ${latitude}<br>Longitude: ${longitude}<br>City: City not found`;
             });
         }
     </script>
@@ -527,7 +527,7 @@ Maharashtra, India.
         const apiKey = '3a4c0d3e87aa45d388c8d5d8b4b3d5ca';
         const cityInput = document.getElementById('cityInput').value;
 
-        const apiUrl = https://api.openweathermap.org/data/2.5/forecast?q=${cityInput}&appid=${apiKey};
+        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityInput}&appid=${apiKey}`;
 
         fetch(apiUrl)
             .then(response => response.json())
@@ -547,7 +547,7 @@ Maharashtra, India.
                     const forecast = data.list[i * 8]; // Jump to the next day
                     const date = new Date(forecast.dt * 1000);
                     const dayOfWeek = new Intl.DateTimeFormat('en', { weekday: 'long' }).format(date);
-                    const formattedDate = (${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()});
+                    const formattedDate = `(${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()})`;
 
                     // Convert temperature from Kelvin to Celsius
                     const temperatureCelsius = (forecast.main.temp - 273.15).toFixed(2);
@@ -564,7 +564,7 @@ Maharashtra, India.
                 }
             } else {
                 // Display error message
-                weatherResults.innerHTML = <p>Error: ${data.message}</p>;
+                weatherResults.innerHTML = `<p>Error: ${data.message}</p>`;
             }
         }
     </script>
